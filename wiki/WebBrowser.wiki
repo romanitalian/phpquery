@@ -1,0 +1,28 @@
+#labels Featured
+*WebBrowser* is a phpQuery plugin that mimics behaviors of web browser. Thanks to that developer can simulate user's behavior inside a script.
+
+Supported are:
+ * Cookies
+ * Relative links
+ * document.location
+
+Some use cases are:
+ * Fill forms and submit them easly
+ * Login to secure pages and collect content
+ * Write test cases reproducing browsing proccess
+
+Example - querying Google:
+{{{
+phpQuery::$plugins->browserGet('http://google.com/', 'success1');
+function success1($browser) {
+$browser
+  ->WebBrowser('success2')
+  ->find('input[name=q]')
+    ->val('phpQuery')
+    ->parents('form')
+      ->submit();
+}
+function success2($html) {
+  print $html;
+}
+}}}
