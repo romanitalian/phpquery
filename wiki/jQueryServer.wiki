@@ -1,5 +1,4 @@
 #labels Featured
-=jQueryServer=
 *jQueryServer* is a jQuery plugin giving unobstrusive, client-side bindings to server-side implementation of jQuery.
 
 Scenario is simple:
