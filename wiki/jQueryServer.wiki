@@ -1,0 +1,17 @@
+#labels Featured
+=jQueryServer=
+*jQueryServer* is a jQuery plugin giving unobstrusive, client-side bindings to server-side implementation of jQuery.
+
+Scenario is simple:
+  # Connect to server and make an Ajax request to somewhere (crossdomain allowed)
+  # Do some manipulations, you can even trigger a server-side event
+  # Get processed date back to browser
+
+Example:
+{{{
+$.server({url: 'http://somesite.com})
+  .find('.my-class')
+    .client(function(response){
+      $('.destination').html(response);
+});
+}}}
