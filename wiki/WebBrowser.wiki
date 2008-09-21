@@ -17,12 +17,12 @@ require_once('phpQuery/phpQuery.php');
 phpQuery::$ajaxAllowedHosts[] = 'google.com';
 phpQuery::$plugins->browserGet('http://google.com/', 'success1');
 function success1($browser) {
-$browser
-  ->WebBrowser('success2')
-  ->find('input[name=q]')
-    ->val('phpQuery')
-    ->parents('form')
-      ->submit();
+  $browser
+    ->WebBrowser('success2')
+    ->find('input[name=q]')
+      ->val('phpQuery')
+      ->parents('form')
+        ->submit();
 }
 function success2($html) {
   print $html;
