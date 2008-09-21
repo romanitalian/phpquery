@@ -1,4 +1,4 @@
-#labels Featured
+#labels Featured,Phase-Implementation
 *WebBrowser* is a phpQuery plugin that mimics behaviors of web browser. Thanks to that developer can simulate user's behavior inside a script.
 
 Supported are:
@@ -13,6 +13,8 @@ Some use cases are:
 
 Example - querying Google:
 {{{
+require_once('phpQuery/phpQuery.php');
+phpQuery::$ajaxAllowedHosts[] = 'google.com';
 phpQuery::$plugins->browserGet('http://google.com/', 'success1');
 function success1($browser) {
 $browser
