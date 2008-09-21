@@ -1,0 +1,64 @@
+==Selectors==
+In *phpQuery*, as in *jQuery*, supported are following *CSS3* selectors.
+====Basics====
+ * *`#id`* Matches a single element with the given id attribute.
+ * *`element`* Matches all elements with the given name.
+ * *`.class`* Matches all elements with the given class.
+ * *`*`* Matches all elements.
+ * *`selector1, selector2, selectorN`* Matches the combined results of all the specified selectors.
+====Hierarchy====
+ * *`ancestor descendant`* Matches all descendant elements specified by "descendant" of elements specified by "ancestor".
+ * *`parent > child`* Matches all child elements specified by "child" of elements specified by "parent".
+ * *`prev + next`* Matches all next elements specified by "next" that are next to elements specified by "prev".
+ * *`prev ~ siblings`* Matches all sibling elements after the "prev" element that match the filtering "siblings" selector.
+====Basic Filters====
+ * *`:first`* Matches the first selected element.
+ * *`:last`* Matches the last selected element.
+ * *`:not(selector)`* Filters out all elements matching the given selector.
+ * *`:even`* Matches even elements, zero-indexed.
+ * *`:odd`* Matches odd elements, zero-indexed.
+ * *`:eq(index)`* Matches a single element by its index.
+ * *`:gt(index)`* Matches all elements with an index above the given one.
+ * *`:lt(index)`* Matches all elements with an index below the given one.
+ * *`:header`* Matches all elements that are headers, like h1, h2, h3 and so on.
+ * *`:animated`* Matches all elements that are currently being animated.
+====Content Filters====
+ * *`:contains(text)`* Matches elements which contain the given text.
+ * *`:empty`* Matches all elements that have no children (including text nodes).
+ * *`:has(selector)`* Matches elements which contain at least one element that matches the specified selector.
+ * *`:parent`* Matches all elements that are parents - they have child elements, including text.
+====Visibility Filters====
+ * *`:hidden`* Matches all elements that are hidden, or input elements of type "hidden".
+ * *`:visible`* Matches all elements that are visible.
+====Attribute Filters====
+ * *`[attribute]`* Matches elements that have the specified attribute.
+ * *`[attribute=value]`* Matches elements that have the specified attribute with a certain value.
+ * *`[attribute!=value]`* Matches elements that don't have the specified attribute with a certain value.
+ * *`[attribute^=value]`* Matches elements that have the specified attribute and it starts with a certain value.
+ * *`[attribute$=value]`* Matches elements that have the specified attribute and it ends with a certain value.
+ * *`[attribute*=value]`* Matches elements that have the specified attribute and it contains a certain value.
+ * *`[selector1][selector2][selectorN]`* Matches elements that have the specified attribute and it contains a certain value.
+====Child Filters====
+ * *`:nth-child(index/even/odd/equation)`* Matches all elements that are the nth-child of their parent or that are the parent's even or odd children.
+ * *`:first-child`* Matches all elements that are the first child of their parent.
+ * *`:last-child`* Matches all elements that are the last child of their parent.
+ * *`:only-child`* Matches all elements that are the only child of their parent.
+====Forms====
+ * *`:input`* Matches all input, textarea, select and button elements.
+ * *`:text`* Matches all input elements of type text.
+ * *`:password`* Matches all input elements of type password.
+ * *`:radio`* Matches all input elements of type radio.
+ * *`:checkbox`* Matches all input elements of type checkbox.
+ * *`:submit`* Matches all input elements of type submit.
+ * *`:image`* Matches all input elements of type image.
+ * *`:reset`* Matches all input elements of type reset.
+ * *`:button`* Matches all button elements and input elements of type button.
+ * *`:file`* Matches all input elements of type file.
+ * *`:hidden`* Matches all elements that are hidden, or input elements of type "hidden".
+====Form Filters====
+ * *`:enabled`* Matches all elements that are enabled.
+ * *`:disabled`* Matches all elements that are disabled.
+ * *`:checked`* Matches all elements that are checked.
+ * *`:selected`* Matches all elements that are selected.
+
+Read more at [http://docs.jquery.com/Selectors Selectors] section on [http://docs.jquery.com/ jQuery Documentation Site].
