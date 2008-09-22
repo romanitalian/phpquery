@@ -15,7 +15,7 @@ foreach($LIs as $li) {
 }}}
 Now there is a catch above. Foreach loop *doesn't return phpQuery object*. Instead it returns pure DOMNode. That's how jQuery does, because not always you need *phpQuery* when you found interesting nodes.
 ====ArrayAccess interface====
-If you like writing array, with phpQuery you can still do it, thanks to the ArrayAccess interface.
+If you like writing arrays, with phpQuery you can still do it, thanks to the ArrayAccess interface.
 {{{
 $pq = phpQuery::newDocumentFile('somefile.html');
 // print first list outer HTML
