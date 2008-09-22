@@ -14,10 +14,7 @@ Some use cases are:
 Example - querying Google:
 {{{
 require_once('phpQuery/phpQuery.php');
-phpQuery::$ajaxAllowedHosts[] = 'google.com';
-phpQuery::extend('WebBrowser');
-
-phpQuery::$plugins->browserGet('http://google.com/', 'success1');
+phpQuery::browserGet('http://google.com/', 'success1');
 function success1($browser) {
   $browser
     ->WebBrowser('success2')
@@ -26,7 +23,7 @@ function success1($browser) {
       ->parents('form')
         ->submit();
 }
-function success2($html) {
-  print $html;
+function success2($browser) {
+  print $browser;
 }
 }}}
