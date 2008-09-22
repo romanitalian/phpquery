@@ -1,4 +1,3 @@
-#labels Featured
 Ajax related methods.
 ====Ajax Requests====
  * *`phpQuery::ajax($options)`* Load a remote page using an HTTP request.
