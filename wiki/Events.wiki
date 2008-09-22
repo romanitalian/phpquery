@@ -1,0 +1,16 @@
+Events related methods.
+====Event Handling====
+ * *`bind($type, $data, $fn)`* Binds a handler to one or more events (like click) for each matched element. Can also bind custom events.
+ * *`one($type, $data, $fn)`* Binds a handler to one or more events to be executed once for each matched element.
+ * *`trigger($type, $data)`* Trigger a type of event on every matched element.
+ * *`triggerHandler($type, $data)`* This particular method triggers all bound event handlers on an element (for a specific event type) WITHOUT executing the browsers default actions.
+ * *`unbind($type, $data)`* This does the opposite of bind, it removes bound events from each of the matched elements.
+====Event Helpers====
+ * *`change()`* Triggers the change event of each matched element.
+ * *`change($fn)`* Binds a function to the change event of each matched element.
+ * *`select()`* Trigger the select event of each matched element.
+ * *`select($fn)`* Bind a function to the select event of each matched element.
+ * *`submit()`* Trigger the submit event of each matched element.
+ * *`submit($fn)`* Bind a function to the submit event of each matched element.
+
+Read more at [http://docs.jquery.com/Events Events section] on [http://docs.jquery.com/ jQuery Documentation Site].
