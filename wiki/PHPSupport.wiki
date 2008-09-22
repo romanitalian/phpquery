@@ -13,7 +13,7 @@ Actually there are 3 major sections:
 ==PHP Interfaces==
 phpQuery implements some of [http://pl.php.net/spl Standard PHP Library (SPL)] interfaces.
 ====Iterator====
-Iterator interface allows looping objects thou native PHP foreach loop. Example:
+Iterator interface allows looping objects thou native PHP *foreach loop*. Example:
 {{{
 // get all direct LI elements from UL list of class 'im-the-list'
 $LIs = pq('ul.im-the-list > li');
