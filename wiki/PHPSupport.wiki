@@ -1,0 +1,47 @@
+Although *phpQuery* is *jQuery* port, there is extensive PHP-specific support.
+
+Actually there are 3 major sections.
+
+==PHP Interfaces==
+phpQuery implements some of [http://pl.php.net/spl Standard PHP Library (SPL)] interfaces.
+====Iterator interface====
+Iterator interface allows looping objects thou native PHP foreach loop. Example:
+{{{
+// get all direct LI elements from UL list of class 'im-the-list'
+$LIs = pq('ul.im-the-list > li');
+foreach($LIs as $li) {
+  pq($li)->addClass('foreached');
+}
+}}}
+Now there is a catch above. Foreach loop *doesn't return phpQuery object*. Instead it returns pure DOMNode. That's how jQuery does, because not always you need *phpQuery* when you found interesting nodes.
+====ArrayAccess interface====
+If you like writing array, with phpQuery you can still do it, thanks to the ArrayAccess interface.
+{{{
+$pq = phpQuery::newDocumentFile('somefile.html');
+// print first list outer HTML
+print $pq['ul:first'];
+// change outer HTML of second direct LI element of first list
+$pq['ul:first > li:eq(1)'] = '<p>new outer HTML</p>';
+}}}
+====Countable interface====
+If used to do `count($something)` you can still do this that way, instead of eg `pq('p')->size()`.
+{{{
+// count all direct LIs in first list
+print count(pq('ul:first > li'));
+}}}
+==Callbacks==
+There is a special [http://code.google.com/p/phpquery/wiki/Callbacks Callback] wiki section.
+==Additional methods==
+Additional methods allows placing PHP code inside DOM.
+ * *`attrPHP($attr, $code)`* equals to `attr($attr, "<?php $code ?>")`
+ * *`addClassPHP($code)`* equals to `addClass("<?php $code ?>")`
+ * *`beforePHP($code)`* equals to `before("<?php $code ?>")`
+ * *`afterPHP($code)`* equals to `after("<?php $code ?>")`
+ * *`prependPHP($code)`* equals to `prepend("<?php $code ?>")`
+ * *`appendPHP($code)`* equals to `append("<?php $code ?>")`
+ * *`php($code)`* equals to `html("<?php $code ?>")`
+ * *`wrapAllPHP($codeBefore, $codeAfter)`* equals to `html("<?php $code ?>")`
+ * *`wrapPHP($codeBefore, $codeAfter)`* equals to `html("<?php $code ?>")`
+ * *`wrapInnerPHP($codeBefore, $codeAfter)`* equals to `html("<?php $code ?>")`
+==PHP Tags==
+Methods from section above doesn't inject runnable code. For safety reasons, file (or it's content) need to be passed thru *`phpQuery::unsafePHPTags`*. This can be done only once, just before outputting the content, because return value is just a *string* not *phpQuery object*.
