@@ -1,0 +1,15 @@
+Some handy functions.
+====Array and Object operations====
+ * *`phpQuery::each($object, $callback)`* A generic iterator function, which can be used to seamlessly iterate over both objects and arrays.
+ * *`phpQuery::extend($target, $object1, $objectN)`* Extend one object with one or more others, returning the original, modified, object.
+ * *`phpQuery::grep($array, $callback, $invert)`* Filter items out of an array, by using a filter function.
+ * *`phpQuery::makeArray($obj)`* Turns an array-like object into a true array.
+ * *`phpQuery::map($array, $callback)`* Translate all items in an array to another array of items.
+ * *`phpQuery::inArray($value, $array)`* Determine the index of the first parameter in the Array (-1 if not found).
+ * *`phpQuery::unique($array)`* Remove all duplicate elements from an array of elements.
+====Test operations====
+ * *`phpQuery::isFunction($obj)`* Determine if the parameter passed is a function.
+====String operations====
+ * *`phpQuery::trim($str)`* Remove the whitespace from the beginning and end of a string.
+
+Read more at [http://docs.jquery.com/Utilities Utilities section] on [http://docs.jquery.com/ jQuery Documentation Site].
