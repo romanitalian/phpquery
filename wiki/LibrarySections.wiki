@@ -1,5 +1,5 @@
 #labels Featured
-*phpQuery*, same as jQuery is divided into following sections:
+*phpQuery*, same as *jQuery* is divided into following sections:
  * [http://code.google.com/p/phpquery/wiki/Selectors Selectors]
  * [http://code.google.com/p/phpquery/wiki/Attributes Attributes]
  * [http://code.google.com/p/phpquery/wiki/Traversing Traversing]
