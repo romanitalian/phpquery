@@ -1,7 +1,14 @@
 #labels Featured,Phase-Implementation
 Although *phpQuery* is *jQuery* port, there is extensive PHP-specific support.
 
-Actually there are 3 major sections.
+Actually there are 3 major sections:
+ * [#PHP_Interfaces PHP Interfaces]
+   * [#Iterator_Interface Iterator Interface]
+   * [#ArrayAccess_Interface ArrayAccess]
+   * [#Countable_Interface Countable Interface]
+ * [http://code.google.com/p/phpquery/wiki/Callbacks Callbacks]
+ * [#PHP_Code_Injection PHP Code Injection]
+   * [#PHP_Tags PHP Tags]
 
 ==PHP Interfaces==
 phpQuery implements some of [http://pl.php.net/spl Standard PHP Library (SPL)] interfaces.
