@@ -1,3 +1,4 @@
+#labels Featured
 Some handy functions.
 ====Array and Object operations====
  * *`phpQuery::each($object, $callback)`* A generic iterator function, which can be used to seamlessly iterate over both objects and arrays.
