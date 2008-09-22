@@ -1,4 +1,3 @@
-#labels Featured
 Traversing related methods.
 ====Filtering====
  * *`eq($index)`* Reduce the set of matched elements to a single element.
