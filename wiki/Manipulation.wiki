@@ -1,0 +1,34 @@
+Manipulatin related methods.
+====Changing Contents====
+ * *`html()`* Get the html contents (innerHTML) of the first matched element. This property is not available on XML documents (although it will work for XHTML documents).
+ * *`html($val)`* Set the html contents of every matched element. This property is not available on XML documents (although it will work for XHTML documents).
+ * *`text()`* Get the combined text contents of all matched elements.
+ * *`text($val)`* Set the text contents of all matched elements.
+====Inserting Inside====
+ * *`append($content)`* Append content to the inside of every matched element.
+ * *`appendTo($content)`* Append all of the matched elements to another, specified, set of elements.
+ * *`prepend($content)`* Prepend content to the inside of every matched element.
+ * *`prependTo($content)`* Prepend all of the matched elements to another, specified, set of elements.
+====Inserting Outside====
+ * *`after($content)`* Insert content after each of the matched elements.
+ * *`before($content)`* Insert content before each of the matched elements.
+ * *`insertAfter($content)`* Insert all of the matched elements after another, specified, set of elements.
+ * *`insertBefore($content)`* Insert all of the matched elements before another, specified, set of elements.
+====Inserting Around====
+ * *`wrap($html)`* Wrap each matched element with the specified HTML content.
+ * *`wrap($elem)`* Wrap each matched element with the specified element.
+ * *`wrapAll($html)`* Wrap all the elements in the matched set into a single wrapper element.
+ * *`wrapAll($elem)`* Wrap all the elements in the matched set into a single wrapper element.
+ * *`wrapInner($html)`* Wrap the inner child contents of each matched element (including text nodes) with an HTML structure.
+ * *`wrapInner($elem)`* Wrap the inner child contents of each matched element (including text nodes) with a DOM element.
+====Replacing====
+ * *`replaceWith($content)`* Replaces all matched elements with the specified HTML or DOM elements.
+ * *`replaceAll($selector)`* Replaces the elements matched by the specified selector with the matched elements.
+====Removing====
+ * *`empty()`* Remove all child nodes from the set of matched elements.
+ * *`remove($expr)`* Removes all matched elements from the DOM.
+====Copying====
+ * *`clone()`* Clone matched DOM Elements and select the clones.
+ * *`clone($true)`* Clone matched DOM Elements, and all their event handlers, and select the clones.
+
+Read more at [http://docs.jquery.com/Manipulation Manipulation] section on [http://docs.jquery.com/ jQuery Documentation Site].
