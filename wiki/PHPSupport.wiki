@@ -3,16 +3,16 @@ Although *phpQuery* is *jQuery* port, there is extensive PHP-specific support.
 
 Actually there are 3 major sections:
  * [#PHP_Interfaces PHP Interfaces]
-   * [#Iterator_Interface Iterator Interface]
-   * [#ArrayAccess_Interface ArrayAccess]
-   * [#Countable_Interface Countable Interface]
+   * [#Iterator Iterator Interface]
+   * [#ArrayAcces ArrayAccess]
+   * [#Countable Countable Interface]
  * [http://code.google.com/p/phpquery/wiki/Callbacks Callbacks]
  * [#PHP_Code_Injection PHP Code Injection]
    * [#PHP_Tags PHP Tags]
 
 ==PHP Interfaces==
 phpQuery implements some of [http://pl.php.net/spl Standard PHP Library (SPL)] interfaces.
-====Iterator interface====
+====Iterator====
 Iterator interface allows looping objects thou native PHP foreach loop. Example:
 {{{
 // get all direct LI elements from UL list of class 'im-the-list'
@@ -22,7 +22,7 @@ foreach($LIs as $li) {
 }
 }}}
 Now there is a catch above. Foreach loop *doesn't return phpQuery object*. Instead it returns pure DOMNode. That's how jQuery does, because not always you need *phpQuery* when you found interesting nodes.
-====ArrayAccess interface====
+====ArrayAccess====
 If you like writing arrays, with phpQuery you can still do it, thanks to the ArrayAccess interface.
 {{{
 $pq = phpQuery::newDocumentFile('somefile.html');
@@ -31,7 +31,7 @@ print $pq['ul:first'];
 // change outer HTML of second direct LI element of first list
 $pq['ul:first > li:eq(1)'] = '<p>new outer HTML</p>';
 }}}
-====Countable interface====
+====Countable====
 If used to do `count($something)` you can still do this that way, instead of eg `pq('p')->size()`.
 {{{
 // count all direct LIs in first list
