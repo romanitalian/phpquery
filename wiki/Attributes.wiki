@@ -10,8 +10,9 @@ Attributes related methods.
  * *`removeClass($class)`* Removes all or the specified class(es) from the set of matched elements.
  * *`toggleClass($class)`* Adds the specified class if it is not present, removes the specified class if it is present.
 ====HTML====
- * *`html()`* Get the html contents (innerHTML) of the first matched element. This property is not available on XML documents (although it will work for XHTML documents).
+ * *`html()`* Get the html contents (innerHTML) of the first matched element.
  * *`html($val)`* Set the html contents of every matched element. This property is not available on XML documents (although it will work for XHTML documents).
+ * *`htmlOuter()`* Get the html contents and element itself (outerHTML) of all matched elements. [http://code.google.com/p/phpquery/wiki/jQueryDifferences jQuery difference].
 ====Text====
  * *`text()`* Get the combined text contents of all matched elements.
  * *`text($val)`* Set the text contents of all matched elements.
