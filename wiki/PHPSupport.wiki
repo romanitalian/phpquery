@@ -1,3 +1,4 @@
+#labels Featured,Phase-Implementation
 Although *phpQuery* is *jQuery* port, there is extensive PHP-specific support.
 
 Actually there are 3 major sections.
@@ -30,7 +31,7 @@ If used to do `count($something)` you can still do this that way, instead of eg 
 print count(pq('ul:first > li'));
 }}}
 ==Callbacks==
-There is a special [http://code.google.com/p/phpquery/wiki/Callbacks Callback] wiki section.
+There is a special [http://code.google.com/p/phpquery/wiki/Callbacks Callbacks] wiki section, to which you should refer to.
 ==PHP Code Injection==
 Additional methods allows placing PHP code inside DOM.
  * *`attrPHP($attr, $code)`* equals to `attr($attr, "<?php $code ?>")`
