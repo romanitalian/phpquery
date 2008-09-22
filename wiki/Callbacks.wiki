@@ -1,0 +1,29 @@
+Callbacks are functions _called back_ by other functions in proper moment (eg on [http://code.google.com/p/phpquery/wiki/Ajax Ajax] request error).
+
+In *JavaScript* this pattern can be very flexible due to [http://en.wikipedia.org/wiki/Closure_(computer_science) Closures] support, which can be inline (no code break) and inherits scope (no need to passing params).
+
+In *PHP* case is more complicated, that's why *ParamStructures* has been introduced in phpQuery. ParamStructures are just list of params, that can be your's or defined places for callback's ones. EG:
+{{{
+phpQuery::each(array(1,2,3), 'myCallback', 'param1', new CallbackParam, new CallbackParam, 'param4');
+function myCallback($param1, $i, $v, $param4) {
+  print "Index: $i; Value: $v";
+}
+}}}
+Example above shows how to easily pass custom params to callback using *ParamStructures*. For today this type of callbacks are supported by following functions:
+ * `phpQuery::each()`
+ * `phpQuery::map()`
+ * `pq()->each()`
+ * `pq()->each()`
+There's also easy way to including scope, which means just variables accessible in specified point of code. It's achieved using [http://php.net/compact compact()] and [http://php.net/extract extract()] functions. Look at this modified example:
+{{{
+$a = 'foo';
+$b = 'bar';
+phpQuery::each(array(1,2,3), 'myCallback', compact('a', 'b'), new CallbackParam, new CallbackParam, 'param4');
+function myCallback($scope, $i, $v, $param4) {
+  extract($scope);
+  print "Var a: $a";
+  print "Var b: $b";
+  print "Index: $i; Value: $v";
+}
+}}}
+In the future this functionality will be developed.
