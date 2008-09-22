@@ -1,0 +1,23 @@
+Attributes related methods.
+====Attr====
+ * *`attr($name)`* Access a property on the first matched element. This method makes it easy to retrieve a property value from the first matched element. If the element does not have an attribute with such a name, undefined is returned.
+ * *`attr($properties)`* Set a key/value object as properties to all matched elements.
+ * *`attr($key, $value)`* Set a single property to a value, on all matched elements.
+ * *`removeAttr($name)`* Remove an attribute from each of the matched elements.
+====Class====
+ * *`addClass($class)`* Adds the specified class(es) to each of the set of matched elements.
+ * *`hasClass($class)`* Returns true if the specified class is present on at least one of the set of matched elements.
+ * *`removeClass($class)`* Removes all or the specified class(es) from the set of matched elements.
+ * *`toggleClass($class)`* Adds the specified class if it is not present, removes the specified class if it is present.
+====HTML====
+ * *`html()`* Get the html contents (innerHTML) of the first matched element. This property is not available on XML documents (although it will work for XHTML documents).
+ * *`html($val)`* Set the html contents of every matched element. This property is not available on XML documents (although it will work for XHTML documents).
+====Text====
+ * *`text()`* Get the combined text contents of all matched elements.
+ * *`text($val)`* Set the text contents of all matched elements.
+====Value====
+ * *`val()`* Get the content of the value attribute of the first matched element.
+ * *`val($val)`* Set the value attribute of every matched element.
+ * *`val($val)`* Checks, or selects, all the radio buttons, checkboxes, and select options that match the set of values.
+
+Read more at [http://docs.jquery.com/Attributes Attributes] section on [http://docs.jquery.com/ jQuery Documentation Site].
