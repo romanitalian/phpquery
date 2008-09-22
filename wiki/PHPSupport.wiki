@@ -4,7 +4,7 @@ Although *phpQuery* is *jQuery* port, there is extensive PHP-specific support.
 Actually there are 3 major sections:
  * [#PHP_Interfaces PHP Interfaces]
    * [#Iterator Iterator Interface]
-   * [#Array_Acces ArrayAccess]
+   * [#Array_Access ArrayAccess]
    * [#Countable Countable Interface]
  * [http://code.google.com/p/phpquery/wiki/Callbacks Callbacks]
  * [#PHP_Code_Injection PHP Code Injection]
