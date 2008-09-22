@@ -1,0 +1,39 @@
+Ajax related methods.
+====Ajax Requests====
+ * *`phpQuery::ajax($options)`* Load a remote page using an HTTP request.
+ * *`load($url, $data, $callback)`* Load HTML from a remote file and inject it into the DOM.
+ * *`phpQuery::get($url, $data, $callback)`* Load a remote page using an HTTP GET request.
+ * *`phpQuery::getJSON($url, $data, $callback)`* Load JSON data using an HTTP GET request.
+ * *`phpQuery::post($url, $data, $callback, $type)`* Load a remote page using an HTTP POST request.
+====Ajax Events====
+ * *`ajaxComplete($callback)`* Attach a function to be executed whenever an AJAX request completes. This is an Ajax Event.
+ * *`ajaxError($callback)`* Attach a function to be executed whenever an AJAX request fails. This is an Ajax Event.
+ * *`ajaxSend($callback)`* Attach a function to be executed before an AJAX request is sent. This is an Ajax Event.
+ * *`ajaxStart($callback)`* Attach a function to be executed whenever an AJAX request begins and there is none already active. This is an Ajax Event.
+ * *`ajaxStop($callback)`* Attach a function to be executed whenever all AJAX requests have ended. This is an Ajax Event.
+ * *`ajaxSuccess($callback)`* Attach a function to be executed whenever an AJAX request completes successfully. This is an Ajax Event.
+====Misc====
+ * *`phpQuery::ajaxSetup($options)`* Setup global settings for AJAX requests.
+ * *`serialize()`* Serializes a set of input elements into a string of data. This will serialize all given elements.
+ * *`serializeArray()`* Serializes all forms and form elements (like the .serialize() method) but returns a JSON data structure for you to work with.
+====Options====
+ * *`async`* `Boolean`
+ * *`beforeSend`* `Function`
+ * *`cache`* `Boolean`
+ * *`complete`* `Function`
+ * *`contentType`* `String`
+ * *`data`* `Object, String`
+ * *`dataType`* `String`
+ * *`error`* `Function`
+ * *`global`* `Boolean`
+ * *`ifModified`* `Boolean`
+ * *`jsonp`* `String`
+ * *`password`* `String`
+ * *`processData`* `Boolean`
+ * *`success`* `Function`
+ * *`timeout`* `Number`
+ * *`type`* `String`
+ * *`url`* `String`
+ * *`username`* `String`
+
+Read more at [http://docs.jquery.com/Ajax Ajax section] on [http://docs.jquery.com/ jQuery Documentation Site].
