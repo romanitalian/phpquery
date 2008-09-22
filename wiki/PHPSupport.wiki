@@ -4,7 +4,7 @@ Although *phpQuery* is *jQuery* port, there is extensive PHP-specific support.
 Actually there are 3 major sections:
  * [#PHP_Interfaces PHP Interfaces]
    * [#Iterator Iterator Interface]
-   * [#ArrayAcces ArrayAccess]
+   * [#Array_Acces ArrayAccess]
    * [#Countable Countable Interface]
  * [http://code.google.com/p/phpquery/wiki/Callbacks Callbacks]
  * [#PHP_Code_Injection PHP Code Injection]
@@ -22,7 +22,7 @@ foreach($LIs as $li) {
 }
 }}}
 Now there is a catch above. Foreach loop *doesn't return phpQuery object*. Instead it returns pure DOMNode. That's how jQuery does, because not always you need *phpQuery* when you found interesting nodes.
-====ArrayAccess====
+====Array Access====
 If you like writing arrays, with phpQuery you can still do it, thanks to the ArrayAccess interface.
 {{{
 $pq = phpQuery::newDocumentFile('somefile.html');
