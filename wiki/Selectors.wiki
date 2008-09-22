@@ -1,4 +1,3 @@
-==Selectors==
 In *phpQuery*, as in *jQuery*, supported are following *CSS3* selectors.
 ====Basics====
  * *`#id`* Matches a single element with the given id attribute.
