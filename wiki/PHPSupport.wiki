@@ -31,7 +31,7 @@ print count(pq('ul:first > li'));
 }}}
 ==Callbacks==
 There is a special [http://code.google.com/p/phpquery/wiki/Callbacks Callback] wiki section.
-==Additional methods==
+==PHP Code Injection==
 Additional methods allows placing PHP code inside DOM.
  * *`attrPHP($attr, $code)`* equals to `attr($attr, "<?php $code ?>")`
  * *`addClassPHP($code)`* equals to `addClass("<?php $code ?>")`
@@ -43,5 +43,5 @@ Additional methods allows placing PHP code inside DOM.
  * *`wrapAllPHP($codeBefore, $codeAfter)`* equals to `html("<?php $code ?>")`
  * *`wrapPHP($codeBefore, $codeAfter)`* equals to `html("<?php $code ?>")`
  * *`wrapInnerPHP($codeBefore, $codeAfter)`* equals to `html("<?php $code ?>")`
-==PHP Tags==
-Methods from section above doesn't inject runnable code. For safety reasons, file (or it's content) need to be passed thru *`phpQuery::unsafePHPTags`*. This can be done only once, just before outputting the content, because return value is just a *string* not *phpQuery object*.
+====PHP Tags====
+Methods from section above doesn't inject runnable code. For safety reasons, file (or it's content) need to be passed thru *`phpQuery::unsafePHPTags()`* method. This can be done only once, just before outputting the content, because return value is just a *string* not *phpQuery object*.
