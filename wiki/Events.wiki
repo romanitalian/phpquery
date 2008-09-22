@@ -1,4 +1,8 @@
-Events related methods.
+phpQuery support *server-side* events, same as jQuery handle client-side ones. On server there isn't, of course, events such as _mouseover_ (but they can be triggered).
+
+By default, phpQuery automatically fires up only *change* event for form elements. If you load WebBrowser plugin, *submit* and *click* will be handled properly - eg submitting form with inputs' data to action URL via new Ajax request.
+
+Implemented are following jQuery methods.
 ====Event Handling====
  * *`bind($type, $data, $fn)`* Binds a handler to one or more events (like click) for each matched element. Can also bind custom events.
  * *`one($type, $data, $fn)`* Binds a handler to one or more events to be executed once for each matched element.
