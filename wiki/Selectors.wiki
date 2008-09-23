@@ -1,4 +1,21 @@
-In *phpQuery*, as in *jQuery*, supported are following *CSS3* selectors.
+Selectors are the heart of jQuery-like interface. Most of [http://www.w3.org/TR/2005/WD-css3-selectors-20051215/ CSS Level3] syntax is implemented (in state same as in jQuery).
+
+Example how to use selectors.
+{{{
+pq(".class ul > li[rel='foo']:first:has(a)")
+  ->appendTo('.append-target-wrapper div')
+}}}
+
+Selectors can be divided into following groups:
+ * [http://code.google.com/p/phpquery/wiki/Selectors#Basics Basics]
+ * [http://code.google.com/p/phpquery/wiki/Selectors#Hierarchy Hierarchy]
+ * [http://code.google.com/p/phpquery/wiki/Selectors#Basic_Filters Basic Filters]
+ * [http://code.google.com/p/phpquery/wiki/Selectors#Content_Filters Content Filters]
+ * Visibility_Filters
+ * [http://code.google.com/p/phpquery/wiki/Selectors#Child_Filters Child Filters]
+ * [http://code.google.com/p/phpquery/wiki/Selectors#Forms Forms Forms]
+ * [http://code.google.com/p/phpquery/wiki/Selectors#Form_Filters Form Filters]
+
 ====Basics====
  * *`#id`* Matches a single element with the given id attribute.
  * *`element`* Matches all elements with the given name.
@@ -26,9 +43,6 @@ In *phpQuery*, as in *jQuery*, supported are following *CSS3* selectors.
  * *`:empty`* Matches all elements that have no children (including text nodes).
  * *`:has(selector)`* Matches elements which contain at least one element that matches the specified selector.
  * *`:parent`* Matches all elements that are parents - they have child elements, including text.
-====Visibility Filters====
- * *`:hidden`* Matches all elements that are hidden, or input elements of type "hidden".
- * *`:visible`* Matches all elements that are visible.
 ====Attribute Filters====
  * *`[attribute]`* Matches elements that have the specified attribute.
  * *`[attribute=value]`* Matches elements that have the specified attribute with a certain value.
