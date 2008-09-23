@@ -11,7 +11,7 @@ Selectors can be divided into following groups:
  * [http://code.google.com/p/phpquery/wiki/Selectors#Hierarchy Hierarchy]
  * [http://code.google.com/p/phpquery/wiki/Selectors#Basic_Filters Basic Filters]
  * [http://code.google.com/p/phpquery/wiki/Selectors#Content_Filters Content Filters]
- * Visibility_Filters
+ * Visibility Filters
  * [http://code.google.com/p/phpquery/wiki/Selectors#Child_Filters Child Filters]
  * [http://code.google.com/p/phpquery/wiki/Selectors#Forms Forms Forms]
  * [http://code.google.com/p/phpquery/wiki/Selectors#Form_Filters Form Filters]
@@ -37,7 +37,6 @@ Selectors can be divided into following groups:
  * *`:gt(index)`* Matches all elements with an index above the given one.
  * *`:lt(index)`* Matches all elements with an index below the given one.
  * *`:header`* Matches all elements that are headers, like h1, h2, h3 and so on.
- * *`:animated`* Matches all elements that are currently being animated.
 ====Content Filters====
  * *`:contains(text)`* Matches elements which contain the given text.
  * *`:empty`* Matches all elements that have no children (including text nodes).
