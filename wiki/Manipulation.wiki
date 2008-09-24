@@ -1,6 +1,6 @@
 ====Example====
 {{{
-q('div.old')->replaceWith( pq('div.new')->clone() )->appendTo('.trash')->prepend('Deleted')->...
+pq('div.old')->replaceWith( pq('div.new')->clone() )->appendTo('.trash')->prepend('Deleted')->...
 }}}
 ====Table of Contents====
  * [#Changing_Contents Changing Contents]
