@@ -2,9 +2,11 @@
 *WebBrowser* is a phpQuery plugin that mimics behaviors of web browser. Thanks to that developer can simulate user's behavior inside a script.
 
 Supported are:
- * Cookies
+ * Link navigation (click event)
+ * Form navigation (submit event)
+ * Cookies (thought [http://framework.zend.com/manual/en/zend.http.cookies.html Zend_Http_CookieJar] 
  * Relative links
- * document.location
+ * document.location (not an object, yet)
 
 Some use cases are:
  * Fill forms and submit them easly
