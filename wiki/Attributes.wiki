@@ -1,24 +1,33 @@
-Attributes related methods.
+====Example====
+{{{
+pq('a')->attr('href', 'newVal')->removeClass('className')->html('newHtml')->...
+}}}
+====Table of Contents====
+ * [#Attr Attr]
+ * [#Class Class]
+ * [#HTML HTML]
+ * [#Text Text]
+ * [#Value Value]
 ====Attr====
- * *`attr($name)`* Access a property on the first matched element. This method makes it easy to retrieve a property value from the first matched element. If the element does not have an attribute with such a name, undefined is returned.
- * *`attr($properties)`* Set a key/value object as properties to all matched elements.
- * *`attr($key, $value)`* Set a single property to a value, on all matched elements.
- * *`removeAttr($name)`* Remove an attribute from each of the matched elements.
+ * *[http://docs.jquery.com/Attributes/attr attr($name)]* Access a property on the first matched element. This method makes it easy to retrieve a property value from the first matched element. If the element does not have an attribute with such a name, undefined is returned.
+ * *[http://docs.jquery.com/Attributes/attr attr($properties)]* Set a key/value object as properties to all matched elements.
+ * *[http://docs.jquery.com/Attributes/attr attr($key, $value)]* Set a single property to a value, on all matched elements.
+ * *[http://docs.jquery.com/Attributes/attr attr($key, $fn)]* Set a single property to a computed value, on all matched elements.
+ * *[http://docs.jquery.com/Attributes/removeAttr removeAttr($name)]* Remove an attribute from each of the matched elements.
 ====Class====
- * *`addClass($class)`* Adds the specified class(es) to each of the set of matched elements.
- * *`hasClass($class)`* Returns true if the specified class is present on at least one of the set of matched elements.
- * *`removeClass($class)`* Removes all or the specified class(es) from the set of matched elements.
- * *`toggleClass($class)`* Adds the specified class if it is not present, removes the specified class if it is present.
+ * *[http://docs.jquery.com/Attributes/addClass addClass($class)]* Adds the specified class(es) to each of the set of matched elements.
+ * *[http://docs.jquery.com/Attributes/hasClass hasClass($class)]* Returns true if the specified class is present on at least one of the set of matched elements.
+ * *[http://docs.jquery.com/Attributes/removeClass removeClass($class)]* Removes all or the specified class(es) from the set of matched elements.
+ * *[http://docs.jquery.com/Attributes/toggleClass toggleClass($class)]* Adds the specified class if it is not present, removes the specified class if it is present.
 ====HTML====
- * *`html()`* Get the html contents (innerHTML) of the first matched element.
- * *`html($val)`* Set the html contents of every matched element. This property is not available on XML documents (although it will work for XHTML documents).
- * *`htmlOuter()`* Get the html contents and element itself (outerHTML) of all matched elements. [http://code.google.com/p/phpquery/wiki/jQueryDifferences jQuery difference].
+ * *[http://docs.jquery.com/Attributes/html html()]* Get the html contents (innerHTML) of the first matched element. This property is not available on XML documents (although it will work for XHTML documents).
+ * *[http://docs.jquery.com/Attributes/html html($val)]* Set the html contents of every matched element. This property is not available on XML documents (although it will work for XHTML documents).
 ====Text====
- * *`text()`* Get the combined text contents of all matched elements.
- * *`text($val)`* Set the text contents of all matched elements.
+ * *[http://docs.jquery.com/Attributes/text text()]* Get the combined text contents of all matched elements.
+ * *[http://docs.jquery.com/Attributes/text text($val)]* Set the text contents of all matched elements.
 ====Value====
- * *`val()`* Get the content of the value attribute of the first matched element.
- * *`val($val)`* Set the value attribute of every matched element.
- * *`val($val)`* Checks, or selects, all the radio buttons, checkboxes, and select options that match the set of values.
+ * *[http://docs.jquery.com/Attributes/val val()]* Get the content of the value attribute of the first matched element.
+ * *[http://docs.jquery.com/Attributes/val val($val)]* Set the value attribute of every matched element.
+ * *[http://docs.jquery.com/Attributes/val val($val)]* Checks, or selects, all the radio buttons, checkboxes, and select options that match the set of values.
 
 Read more at [http://docs.jquery.com/Attributes Attributes] section on [http://docs.jquery.com/ jQuery Documentation Site].
