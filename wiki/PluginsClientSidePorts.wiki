@@ -1,0 +1,8 @@
+=This page is TODO=
+In [http://code.google.com/p/phpquery/issues/list Issue Tracker] there is a list of [http://code.google.com/p/phpquery/issues/list?can=2&q=label%3APort plugins which are planned to be ported].
+==JSON==
+Port of [http://jollytoad.googlepages.com/json.js JSON] plugin.
+{{{
+phpQuery::toJSON( pq('form')->serializeArray() );
+phpQuery::parseJSON('{"foo": "bar"}');
+}}}
