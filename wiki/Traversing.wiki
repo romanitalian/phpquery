@@ -1,12 +1,12 @@
-====Example====
+==Example==
 {{{
 pq('div > p')->add('div > ul')->filter(':has(a)')->find('p:first')->nextAll()->andSelf()->...
 }}}
-====Table of Contents====
+=Table of Contents=
  * [#Filtering Filtering]
  * [#Finding Finding]
  * [#Chaining Chaining]
-====Filtering====
+==Filtering==
  * *[http://docs.jquery.com/Traversing/eq eq]*[http://docs.jquery.com/Traversing/eq ($index)] Reduce the set of matched elements to a single element.
  * *[http://docs.jquery.com/Traversing/hasClass hasClass]*[http://docs.jquery.com/Traversing/hasClass ($class)] Checks the current selection against a class and returns true, if at least one element of the selection has the given class.
  * *[http://docs.jquery.com/Traversing/filter filter]*[http://docs.jquery.com/Traversing/filter ($expr)] Removes all elements from the set of matched elements that do not match the specified expression(s).
@@ -15,7 +15,7 @@ pq('div > p')->add('div > ul')->filter(':has(a)')->find('p:first')->nextAll()->a
  * *[http://docs.jquery.com/Traversing/map map]*[http://docs.jquery.com/Traversing/map ($callback)] Translate a set of elements in the jQuery object into another set of values in an array (which may, or may not, be elements).
  * *[http://docs.jquery.com/Traversing/not not]*[http://docs.jquery.com/Traversing/not ($expr)] Removes elements matching the specified expression from the set of matched elements.
  * *[http://docs.jquery.com/Traversing/slice slice]*[http://docs.jquery.com/Traversing/slice ($start, $end)] Selects a subset of the matched elements.
-====Finding====
+==Finding==
  * *[http://docs.jquery.com/Traversing/add add]*[http://docs.jquery.com/Traversing/add ($expr)] Adds more elements, matched by the given expression, to the set of matched elements.
  * *[http://docs.jquery.com/Traversing/children children]*[http://docs.jquery.com/Traversing/children ($expr)] Get a set of elements containing all of the unique immediate children of each of the matched set of elements.
  * *[http://docs.jquery.com/Traversing/contents contents]*[http://docs.jquery.com/Traversing/contents ()] Find all the child nodes inside the matched elements (including text nodes), or the content document, if the element is an iframe.
@@ -27,7 +27,7 @@ pq('div > p')->add('div > ul')->filter(':has(a)')->find('p:first')->nextAll()->a
  * *[http://docs.jquery.com/Traversing/prev prev]*[http://docs.jquery.com/Traversing/prev ($expr)] Get a set of elements containing the unique previous siblings of each of the matched set of elements.
  * *[http://docs.jquery.com/Traversing/prevAll prevAll]*[http://docs.jquery.com/Traversing/prevAll ($expr)] Find all sibling elements before the current element.
  * *[http://docs.jquery.com/Traversing/siblings siblings]*[http://docs.jquery.com/Traversing/siblings ($expr)] Get a set of elements containing all of the unique siblings of each of the matched set of elements. Can be filtered with an optional expressions.
-====Chaining====
+==Chaining==
  * *[http://docs.jquery.com/Traversing/andSelf andSelf]*[http://docs.jquery.com/Traversing/andSelf ()] Add the previous selection to the current selection.
  * *[http://docs.jquery.com/Traversing/end end]*[http://docs.jquery.com/Traversing/end ()] Revert the most recent 'destructive' operation, changing the set of matched elements to its previous state (right before the destructive operation).
 
