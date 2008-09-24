@@ -1,20 +1,33 @@
+====Example====
+{{{
+pq('form')->bind('submit', 'submitHandler')->trigger('submit')->...
+}}}
+====Table of Contents====
+ * [#Server_Side_Events Server Side events]
+ * [#Page_Load Page Load]
+ * [#Event_Handling Event Handling]
+ * [#Interaction_Helpers Interaction Helpers]
+ * [#Event_Helpers Event Helpers]
+====Server side events====
 phpQuery support *server-side* events, same as jQuery handle client-side ones. On server there isn't, of course, events such as _mouseover_ (but they can be triggered).
 
-By default, phpQuery automatically fires up only *change* event for form elements. If you load WebBrowser plugin, *submit* and *click* will be handled properly - eg submitting form with inputs' data to action URL via new Ajax request.
-
-Implemented are following jQuery methods.
+By default, phpQuery automatically fires up only *change* event for form elements. If you load WebBrowser plugin, *submit* and *click* will be handled properly - eg submitting form with inputs' data to action URL via new [http://code.google.com/p/phpquery/wiki/Ajax Ajax] request.
+====Page Load====
+_none_
 ====Event Handling====
- * *`bind($type, $data, $fn)`* Binds a handler to one or more events (like click) for each matched element. Can also bind custom events.
- * *`one($type, $data, $fn)`* Binds a handler to one or more events to be executed once for each matched element.
- * *`trigger($type, $data)`* Trigger a type of event on every matched element.
- * *`triggerHandler($type, $data)`* This particular method triggers all bound event handlers on an element (for a specific event type) WITHOUT executing the browsers default actions.
- * *`unbind($type, $data)`* This does the opposite of bind, it removes bound events from each of the matched elements.
+ * *[http://docs.jquery.com/Events/bind bind]*[http://docs.jquery.com/Events/bind ($type, $data, $fn)] Binds a handler to one or more events (like click) for each matched element. Can also bind custom events.
+ * *[http://docs.jquery.com/Events/one one]*[http://docs.jquery.com/Events/one ($type, $data, $fn)] Binds a handler to one or more events to be executed once for each matched element.
+ * *[http://docs.jquery.com/Events/trigger trigger]*[http://docs.jquery.com/Events/trigger ($type , $data )] Trigger a type of event on every matched element.
+ * *[http://docs.jquery.com/Events/triggerHandler triggerHandler]*[http://docs.jquery.com/Events/triggerHandler ($type , $data )] This particular method triggers all bound event handlers on an element (for a specific event type) WITHOUT executing the browsers default actions.
+ * *[http://docs.jquery.com/Events/unbind unbind]*[http://docs.jquery.com/Events/unbind ($type , $data )] This does the opposite of bind, it removes bound events from each of the matched elements.
+====Interaction Helpers====
+_none_
 ====Event Helpers====
- * *`change()`* Triggers the change event of each matched element.
- * *`change($fn)`* Binds a function to the change event of each matched element.
- * *`select()`* Trigger the select event of each matched element.
- * *`select($fn)`* Bind a function to the select event of each matched element.
- * *`submit()`* Trigger the submit event of each matched element.
- * *`submit($fn)`* Bind a function to the submit event of each matched element.
+ * *[http://docs.jquery.com/Events/change change]*[http://docs.jquery.com/Events/change ()] Triggers the change event of each matched element.
+ * *[http://docs.jquery.com/Events/change change]*[http://docs.jquery.com/Events/change ($fn)] Binds a function to the change event of each matched element.
+ * *[http://docs.jquery.com/Events/select select]*[http://docs.jquery.com/Events/select ()] Trigger the select event of each matched element.
+ * *[http://docs.jquery.com/Events/select select]*[http://docs.jquery.com/Events/select ($fn)] Bind a function to the select event of each matched element.
+ * *[http://docs.jquery.com/Events/submit submit]*[http://docs.jquery.com/Events/submit ()] Trigger the submit event of each matched element.
+ * *[http://docs.jquery.com/Events/submit submit]*[http://docs.jquery.com/Events/submit ($fn)] Bind a function to the submit event of each matched element.
 
-Read more at [http://docs.jquery.com/Events Events section] on [http://docs.jquery.com/ jQuery Documentation Site].
+Read more at [http://docs.jquery.com/Events Events] section on [http://docs.jquery.com/ jQuery Documentation Site].
