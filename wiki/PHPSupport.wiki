@@ -1,7 +1,7 @@
 #labels Featured,Phase-Implementation
 Although *phpQuery* is *jQuery* port, there is extensive PHP-specific support.
 
-Actually there are 3 major sections:
+=Table of Contents=
  * [#PHP_Interfaces PHP Interfaces]
    * [#Iterator Iterator Interface]
    * [#Array_Access ArrayAccess]
@@ -40,16 +40,28 @@ print count(pq('ul:first > li'));
 ==Callbacks==
 There is a special [http://code.google.com/p/phpquery/wiki/Callbacks Callbacks] wiki section, to which you should refer to.
 ==PHP Code Injection==
-Additional methods allows placing PHP code inside DOM.
- * *`attrPHP($attr, $code)`* equals to `attr($attr, "<?php $code ?>")`
- * *`addClassPHP($code)`* equals to `addClass("<?php $code ?>")`
- * *`beforePHP($code)`* equals to `before("<?php $code ?>")`
- * *`afterPHP($code)`* equals to `after("<?php $code ?>")`
- * *`prependPHP($code)`* equals to `prepend("<?php $code ?>")`
- * *`appendPHP($code)`* equals to `append("<?php $code ?>")`
- * *`php($code)`* equals to `html("<?php $code ?>")`
- * *`wrapAllPHP($codeBefore, $codeAfter)`* equals to `html("<?php $code ?>")`
- * *`wrapPHP($codeBefore, $codeAfter)`* equals to `html("<?php $code ?>")`
- * *`wrapInnerPHP($codeBefore, $codeAfter)`* equals to `html("<?php $code ?>")`
+Additional methods allows placing PHP code inside DOM. Below each method visible is it's logic equivalent.
+ * *attrPHP*($attr, $code)
+   * [http://docs.jquery.com/Attributes/attr attr]($attr, "<?php $code ?>")
+ * *addClassPHP*($code)
+   * [http://docs.jquery.com/Attributes/addClass addClass]("<?php $code ?>")
+ * *beforePHP*($code)
+   * [http://docs.jquery.com/Manipulation/before before]("<?php $code ?>")
+ * *afterPHP*($code)
+   * [http://docs.jquery.com/Manipulation/after after]("<?php $code ?>")
+ * *prependPHP*($code)
+   * [http://docs.jquery.com/Manipulation/prepend prepend]("<?php $code ?>")
+ * *appendPHP*($code)
+   * [http://docs.jquery.com/Manipulation/append append]("<?php $code ?>")
+ * *php*($code)
+   * [http://docs.jquery.com/Manipulation/html html]("<?php $code ?>")
+ * *wrapAllPHP*($codeBefore, $codeAfter)
+   * [http://docs.jquery.com/Manipulation/wrapAll wrapAll]("<?php $codeBefore?><?php $codeAfter ?>")
+ * *wrapPHP*($codeBefore, $codeAfter)
+   * [http://docs.jquery.com/Manipulation/wrap wrap]("<?php $codeBefore?><?php $codeAfter ?>")
+ * *wrapInnerPHP*($codeBefore, $codeAfter)
+   * [http://docs.jquery.com/Manipulation/wrapInner wrapInner]("<?php $codeBefore?><?php $codeAfter ?>")
+ * *replaceWithPHP*($code)
+   * [http://docs.jquery.com/Manipulation/replaceWith replaceWith]("<?php $code ?>")
 ====PHP Tags====
 Methods from section above doesn't inject runnable code. For safety reasons, file (or it's content) need to be passed thru *`phpQuery::unsafePHPTags()`* method. This can be done only once, just before outputting the content, because return value is just a *string* not *phpQuery object*.
