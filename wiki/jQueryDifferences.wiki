@@ -1,1 +1,5 @@
-Place for jQuery differences list.
+=This page is TODO=
+==Additional methods==
+ * htmlOuter()
+ * getText()
+ * reverse()
