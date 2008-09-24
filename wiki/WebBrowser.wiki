@@ -13,7 +13,13 @@
  * Login to secure pages and collect content
  * Write test cases reproducing browsing proccess
 
-==Example==
+==Example 1==
+Adding web browser functionality to existing phpQuery object and submiting the form.
+{{{
+->WebBrowser('callback')->find('form')->submit()->...
+}}}
+
+==Example 2==
 Querying Google against "search phrase":
 {{{
 require_once('phpQuery/phpQuery.php');
