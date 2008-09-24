@@ -1,8 +1,8 @@
-====Example====
+==Example==
 {{{
 pq('div.old')->replaceWith( pq('div.new')->clone() )->appendTo('.trash')->prepend('Deleted')->...
 }}}
-====Table of Contents====
+=Table of Contents=
  * [#Changing_Contents Changing Contents]
  * [#Inserting_Inside Inserting Inside]
  * [#Inserting_Outside Inserting Outside]
@@ -10,35 +10,35 @@ pq('div.old')->replaceWith( pq('div.new')->clone() )->appendTo('.trash')->prepen
  * [#Replacing Replacing]
  * [#Removing Removing]
  * [#Copying Copying]
-====Changing Contents====
+==Changing Contents==
  * *[http://docs.jquery.com/Manipulation/html html]*[http://docs.jquery.com/Manipulation/html ()] Get the html contents (innerHTML) of the first matched element. This property is not available on XML documents (although it will work for XHTML documents).
  * *[http://docs.jquery.com/Manipulation/html html]*[http://docs.jquery.com/Manipulation/html ($val)] Set the html contents of every matched element. This property is not available on XML documents (although it will work for XHTML documents).
  * *[http://docs.jquery.com/Manipulation/text text]*[http://docs.jquery.com/Manipulation/text ()] Get the combined text contents of all matched elements.
  * *[http://docs.jquery.com/Manipulation/text text]*[http://docs.jquery.com/Manipulation/text ($val)] Set the text contents of all matched elements.
-====Inserting Inside====
+==Inserting Inside==
  * *[http://docs.jquery.com/Manipulation/append append]*[http://docs.jquery.com/Manipulation/append ($content)] Append content to the inside of every matched element.
  * *[http://docs.jquery.com/Manipulation/appendTo appendTo]*[http://docs.jquery.com/Manipulation/appendTo ($content)] Append all of the matched elements to another, specified, set of elements.
  * *[http://docs.jquery.com/Manipulation/prepend prepend]*[http://docs.jquery.com/Manipulation/prepend ($content)] Prepend content to the inside of every matched element.
  * *[http://docs.jquery.com/Manipulation/prependTo prependTo]*[http://docs.jquery.com/Manipulation/prependTo ($content)] Prepend all of the matched elements to another, specified, set of elements.
-====Inserting Outside====
+==Inserting Outside==
  * *[http://docs.jquery.com/Manipulation/after after]*[http://docs.jquery.com/Manipulation/after ($content)] Insert content after each of the matched elements.
  * *[http://docs.jquery.com/Manipulation/before before]*[http://docs.jquery.com/Manipulation/before ($content)] Insert content before each of the matched elements.
  * *[http://docs.jquery.com/Manipulation/insertAfter insertAfter]*[http://docs.jquery.com/Manipulation/insertAfter ($content)] Insert all of the matched elements after another, specified, set of elements.
  * *[http://docs.jquery.com/Manipulation/insertBefore insertBefore]*[http://docs.jquery.com/Manipulation/insertBefore ($content)] Insert all of the matched elements before another, specified, set of elements.
-====Inserting Around====
+==Inserting Around==
  * *[http://docs.jquery.com/Manipulation/wrap wrap]*[http://docs.jquery.com/Manipulation/wrap ($html)] Wrap each matched element with the specified HTML content.
  * *[http://docs.jquery.com/Manipulation/wrap wrap]*[http://docs.jquery.com/Manipulation/wrap ($elem)] Wrap each matched element with the specified element.
  * *[http://docs.jquery.com/Manipulation/wrapAll wrapAll]*[http://docs.jquery.com/Manipulation/wrapAll ($html)] Wrap all the elements in the matched set into a single wrapper element.
  * *[http://docs.jquery.com/Manipulation/wrapAll wrapAll]*[http://docs.jquery.com/Manipulation/wrapAll ($elem)] Wrap all the elements in the matched set into a single wrapper element.
  * *[http://docs.jquery.com/Manipulation/wrapInner wrapInner]*[http://docs.jquery.com/Manipulation/wrapInner ($html)] Wrap the inner child contents of each matched element (including text nodes) with an HTML structure.
  * *[http://docs.jquery.com/Manipulation/wrapInner wrapInner]*[http://docs.jquery.com/Manipulation/wrapInner ($elem)] Wrap the inner child contents of each matched element (including text nodes) with a DOM element.
-====Replacing====
+==Replacing==
  * *[http://docs.jquery.com/Manipulation/replaceWith replaceWith]*[http://docs.jquery.com/Manipulation/replaceWith ($content)] Replaces all matched elements with the specified HTML or DOM elements.
  * *[http://docs.jquery.com/Manipulation/replaceAll replaceAll]*[http://docs.jquery.com/Manipulation/replaceAll ($selector)] Replaces the elements matched by the specified selector with the matched elements.
-====Removing====
+==Removing==
  * *[http://docs.jquery.com/Manipulation/empty empty]*[http://docs.jquery.com/Manipulation/empty ()] Remove all child nodes from the set of matched elements.
  * *[http://docs.jquery.com/Manipulation/remove remove]*[http://docs.jquery.com/Manipulation/remove ($expr)] Removes all matched elements from the DOM.
-====Copying====
+==Copying==
  * *[http://docs.jquery.com/Manipulation/clone clone]*[http://docs.jquery.com/Manipulation/clone ()] Clone matched DOM Elements and select the clones.
  * *[http://docs.jquery.com/Manipulation/clone clone]*[http://docs.jquery.com/Manipulation/clone ($true)] Clone matched DOM Elements, and all their event handlers, and select the clones.
 
