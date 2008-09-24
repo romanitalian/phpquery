@@ -1,9 +1,9 @@
 Selectors are the heart of jQuery-like interface. Most of [http://www.w3.org/TR/2005/WD-css3-selectors-20051215/ CSS Level 3] syntax is implemented (in state same as in jQuery).
-====Example====
+==Example==
 {{{
 pq(".class ul > li[rel='foo']:first:has(a)")->appendTo('.append-target-wrapper div')->...
 }}}
-====Table of Contents====
+=Table of Contents=
  * [#Basics Basics]
  * [#Hierarchy Hierarchy]
  * [#Basic_Filters Basic Filters]
@@ -13,18 +13,18 @@ pq(".class ul > li[rel='foo']:first:has(a)")->appendTo('.append-target-wrapper d
  * [#Child_Filters Child Filters]
  * [#Forms Forms]
  * [#Form_Filters Form Filters]
-====Basics====
+==Basics==
  * *[http://docs.jquery.com/Selectors/id #id]* Matches a single element with the given id attribute.
  * *[http://docs.jquery.com/Selectors/element element]* Matches all elements with the given name.
  * *[http://docs.jquery.com/Selectors/class .class]* Matches all elements with the given class.
  * *[http://docs.jquery.com/Selectors/all *]* Matches all elements.
  * *[http://docs.jquery.com/Selectors/multiple selector1, selector2, selectorN]* Matches the combined results of all the specified selectors.
-====Hierarchy====
+==Hierarchy==
  * *[http://docs.jquery.com/Selectors/descendant ancestor descendant]* Matches all descendant elements specified by "descendant" of elements specified by "ancestor".
  * *[http://docs.jquery.com/Selectors/child parent > child]* Matches all child elements specified by "child" of elements specified by "parent".
  * *[http://docs.jquery.com/Selectors/next prev + next]* Matches all next elements specified by "next" that are next to elements specified by "prev".
  * *[http://docs.jquery.com/Selectors/siblings prev ~ siblings]* Matches all sibling elements after the "prev" element that match the filtering "siblings" selector.
-====Basic Filters====
+==Basic Filters==
  * *[http://docs.jquery.com/Selectors/first :first]* Matches the first selected element.
  * *[http://docs.jquery.com/Selectors/last :last]* Matches the last selected element.
  * *[http://docs.jquery.com/Selectors/not :not(selector)]* Filters out all elements matching the given selector.
@@ -35,14 +35,14 @@ pq(".class ul > li[rel='foo']:first:has(a)")->appendTo('.append-target-wrapper d
  * *[http://docs.jquery.com/Selectors/lt :lt(index)]* Matches all elements with an index below the given one.
  * *[http://docs.jquery.com/Selectors/header :header]* Matches all elements that are headers, like h1, h2, h3 and so on.
  * *[http://docs.jquery.com/Selectors/animated :animated]* Matches all elements that are currently being animated.
-====Content Filters====
+==Content Filters==
  * *[http://docs.jquery.com/Selectors/contains :contains(text)]* Matches elements which contain the given text.
  * *[http://docs.jquery.com/Selectors/empty :empty]* Matches all elements that have no children (including text nodes).
  * *[http://docs.jquery.com/Selectors/has :has(selector)]* Matches elements which contain at least one element that matches the specified selector.
  * *[http://docs.jquery.com/Selectors/parent :parent]* Matches all elements that are parents - they have child elements, including text.
-====Visibility Filters====
+==Visibility Filters==
 _none_
-====Attribute Filters====
+==Attribute Filters==
  * *[http://docs.jquery.com/Selectors/attributeHas [attribute]]* Matches elements that have the specified attribute.
  * *[http://docs.jquery.com/Selectors/attributeEquals [attribute=value]]* Matches elements that have the specified attribute with a certain value.
  * *[http://docs.jquery.com/Selectors/attributeNotEqual [attribute!=value]]* Matches elements that don't have the specified attribute with a certain value.
@@ -50,12 +50,12 @@ _none_
  * *[http://docs.jquery.com/Selectors/attributeEndsWith [attribute$=value]]* Matches elements that have the specified attribute and it ends with a certain value.
  * *[http://docs.jquery.com/Selectors/attributeContains [attribute*=value]]* Matches elements that have the specified attribute and it contains a certain value.
  * *[http://docs.jquery.com/Selectors/attributeMultiple [selector1][selector2][selectorN]]* Matches elements that have the specified attribute and it contains a certain value.
-====Child Filters====
+==Child Filters==
  * *[http://docs.jquery.com/Selectors/nthChild :nth-child(index/even/odd/equation)]* Matches all elements that are the nth-child of their parent or that are the parent's even or odd children.
  * *[http://docs.jquery.com/Selectors/firstChild :first-child]* Matches all elements that are the first child of their parent.
  * *[http://docs.jquery.com/Selectors/lastChild :last-child]* Matches all elements that are the last child of their parent.
  * *[http://docs.jquery.com/Selectors/onlyChild :only-child]* Matches all elements that are the only child of their parent.
-====Forms====
+==Forms==
  * *[http://docs.jquery.com/Selectors/input :input]* Matches all input, textarea, select and button elements.
  * *[http://docs.jquery.com/Selectors/text :text]* Matches all input elements of type text.
  * *[http://docs.jquery.com/Selectors/password :password]* Matches all input elements of type password.
@@ -67,7 +67,7 @@ _none_
  * *[http://docs.jquery.com/Selectors/button :button]* Matches all button elements and input elements of type button.
  * *[http://docs.jquery.com/Selectors/file :file]* Matches all input elements of type file.
  * *[http://docs.jquery.com/Selectors/hidden :hidden]* Matches all elements that are hidden, or input elements of type "hidden".
-====Form Filters====
+==Form Filters==
  * *[http://docs.jquery.com/Selectors/enabled :enabled]* Matches all elements that are enabled.
  * *[http://docs.jquery.com/Selectors/disabled :disabled]* Matches all elements that are disabled.
  * *[http://docs.jquery.com/Selectors/checked :checked]* Matches all elements that are checked.
