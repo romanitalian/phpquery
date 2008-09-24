@@ -1,26 +1,36 @@
+==Example==
+{{{
+pq('#element')->load('http://somesite.com/page .inline-selector')->...
+}}}
+=Table of Contents=
+ * [#Server_Side_Ajax Server Side Ajax]
+ * [#Ajax_Requests Ajax Requests]
+ * [#Ajax_Events Ajax Events]
+ * [#Misc Misc]
+==Server Side Ajax==
 Ajax, standing for _Asynchronous JavaScript and XML_ is combination of HTTP Client and XML parser which doesn't lock program's thread (doing request in asynchronous way).
 
 *phpQuery* also offers such functionality, making use of solid quality [http://framework.zend.com/manual/en/zend.http.html Zend_Http_Client]. Unfortunately requests aren't asynchronous, but nothing is impossible. For today, instead of [http://en.wikipedia.org/wiki/XMLHttpRequest XMLHttpRequest] you always get Zend_Http_Client instance. API unification is [http://code.google.com/p/phpquery/issues/detail?id=44 planned].
-
-Implemented are following jQuery methods. 
-====Ajax Requests====
- * *`phpQuery::ajax($options)`* Load a remote page using an HTTP request.
- * *`load($url, $data, $callback)`* Load HTML from a remote file and inject it into the DOM.
- * *`phpQuery::get($url, $data, $callback)`* Load a remote page using an HTTP GET request.
- * *`phpQuery::getJSON($url, $data, $callback)`* Load JSON data using an HTTP GET request.
- * *`phpQuery::post($url, $data, $callback, $type)`* Load a remote page using an HTTP POST request.
-====Ajax Events====
- * *`ajaxComplete($callback)`* Attach a function to be executed whenever an AJAX request completes. This is an Ajax Event.
- * *`ajaxError($callback)`* Attach a function to be executed whenever an AJAX request fails. This is an Ajax Event.
- * *`ajaxSend($callback)`* Attach a function to be executed before an AJAX request is sent. This is an Ajax Event.
- * *`ajaxStart($callback)`* Attach a function to be executed whenever an AJAX request begins and there is none already active. This is an Ajax Event.
- * *`ajaxStop($callback)`* Attach a function to be executed whenever all AJAX requests have ended. This is an Ajax Event.
- * *`ajaxSuccess($callback)`* Attach a function to be executed whenever an AJAX request completes successfully. This is an Ajax Event.
-====Misc====
- * *`phpQuery::ajaxSetup($options)`* Setup global settings for AJAX requests.
- * *`serialize()`* Serializes a set of input elements into a string of data. This will serialize all given elements.
- * *`serializeArray()`* Serializes all forms and form elements (like the .serialize() method) but returns a JSON data structure for you to work with.
-====Options====
+==Ajax Requests==
+ * *[http://docs.jquery.com/Ajax/jQuery.ajax phpQuery::ajax]*[http://docs.jquery.com/Ajax/jQuery.ajax ($options)] Load a remote page using an HTTP request.
+ * *[http://docs.jquery.com/Ajax/load load]*[http://docs.jquery.com/Ajax/load ($url, $data, $callback)] Load HTML from a remote file and inject it into the DOM.
+ * *[http://docs.jquery.com/Ajax/jQuery.get phpQuery::get]*[http://docs.jquery.com/Ajax/jQuery.get ($url, $data, $callback)] Load a remote page using an HTTP GET request.
+ * *[http://docs.jquery.com/Ajax/jQuery.getJSON phpQuery::getJSON]*[http://docs.jquery.com/Ajax/jQuery.getJSON ($url, $data, $callback)] Load JSON data using an HTTP GET request.
+ * *[http://docs.jquery.com/Ajax/jQuery.getScript phpQuery::getScript]*[http://docs.jquery.com/Ajax/jQuery.getScript ($url, $callback)] Loads, and executes, a local JavaScript file using an HTTP GET request.
+ * *[http://docs.jquery.com/Ajax/jQuery.post phpQuery::post]*[http://docs.jquery.com/Ajax/jQuery.post ($url, $data, $callback, $type)] Load a remote page using an HTTP POST request.
+==Ajax Events==
+ * *[http://docs.jquery.com/Ajax/ajaxComplete ajaxComplete]*[http://docs.jquery.com/Ajax/ajaxComplete ($callback)] Attach a function to be executed whenever an AJAX request completes. This is an Ajax Event.
+ * *[http://docs.jquery.com/Ajax/ajaxError ajaxError]*[http://docs.jquery.com/Ajax/ajaxError ($callback)] Attach a function to be executed whenever an AJAX request fails. This is an Ajax Event.
+ * *[http://docs.jquery.com/Ajax/ajaxSend ajaxSend]*[http://docs.jquery.com/Ajax/ajaxSend ($callback)] Attach a function to be executed before an AJAX request is sent. This is an Ajax Event.
+ * *[http://docs.jquery.com/Ajax/ajaxStart ajaxStart]*[http://docs.jquery.com/Ajax/ajaxStart ($callback)] Attach a function to be executed whenever an AJAX request begins and there is none already active. This is an Ajax Event.
+ * *[http://docs.jquery.com/Ajax/ajaxStop ajaxStop]*[http://docs.jquery.com/Ajax/ajaxStop ($callback)] Attach a function to be executed whenever all AJAX requests have ended. This is an Ajax Event.
+ * *[http://docs.jquery.com/Ajax/ajaxSuccess ajaxSuccess]*[http://docs.jquery.com/Ajax/ajaxSuccess ($callback)] Attach a function to be executed whenever an AJAX request completes successfully. This is an Ajax Event.
+==Misc==
+ * *[http://docs.jquery.com/Ajax/jQuery.ajaxSetup phpQuery::ajaxSetup]*[http://docs.jquery.com/Ajax/jQuery.ajaxSetup ($options)] Setup global settings for AJAX requests.
+ * *[http://docs.jquery.com/Ajax/serialize serialize]*[http://docs.jquery.com/Ajax/serialize ()] Serializes a set of input elements into a string of data. This will serialize all given elements.
+ * *[http://docs.jquery.com/Ajax/serializeArray serializeArray]*[http://docs.jquery.com/Ajax/serializeArray ()] Serializes all forms and form elements (like the .serialize() method) but returns a JSON data structure for you to work with.
+==Options==
+Detailed options description in available at [http://docs.jquery.com/Ajax/jQuery.ajax#toptions jQuery Documentation Site].
  * *`async`* `Boolean`
  * *`beforeSend`* `Function`
  * *`cache`* `Boolean`
@@ -40,4 +50,4 @@ Implemented are following jQuery methods.
  * *`url`* `String`
  * *`username`* `String`
 
-Read more at [http://docs.jquery.com/Ajax Ajax section] on [http://docs.jquery.com/ jQuery Documentation Site].
+Read more at [http://docs.jquery.com/Ajax Ajax] section on [http://docs.jquery.com/ jQuery Documentation Site].
