@@ -3,12 +3,12 @@
 pq('form')->bind('submit', 'submitHandler')->trigger('submit')->...
 }}}
 =Table of Contents=
- * [#Server_Side_Events Server Side events]
+ * [#Server_Side_Events Server Side Events]
  * [#Page_Load Page Load]
  * [#Event_Handling Event Handling]
  * [#Interaction_Helpers Interaction Helpers]
  * [#Event_Helpers Event Helpers]
-==Server side events==
+==Server Side Events==
 phpQuery support *server-side* events, same as jQuery handle client-side ones. On server there isn't, of course, events such as _mouseover_ (but they can be triggered).
 
 By default, phpQuery automatically fires up only *change* event for form elements. If you load WebBrowser plugin, *submit* and *click* will be handled properly - eg submitting form with inputs' data to action URL via new [http://code.google.com/p/phpquery/wiki/Ajax Ajax] request.
