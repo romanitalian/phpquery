@@ -1,7 +1,7 @@
 Selectors are the heart of jQuery-like interface. Most of [http://www.w3.org/TR/2005/WD-css3-selectors-20051215/ CSS Level 3] syntax is implemented (in state same as in jQuery).
 ====Example====
 {{{
-pq(".class ul > li[rel='foo']:first:has(a)")->appendTo('.append-target-wrapper div')
+pq(".class ul > li[rel='foo']:first:has(a)")->appendTo('.append-target-wrapper div')->...
 }}}
 ====Table of Contents====
  * [#Basics Basics]
