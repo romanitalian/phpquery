@@ -1,0 +1,7 @@
+=This page is TODO=
+====JSON====
+Port of [http://jollytoad.googlepages.com/json.js JSON] plugin.
+{{{
+phpQuery::toJSON( pq('form')->serializeArray() );
+phpQuery::parseJSON('{"foo": "bar"}');
+}}}
