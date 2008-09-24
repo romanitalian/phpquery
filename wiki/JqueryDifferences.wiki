@@ -1,0 +1,5 @@
+=This page is TODO=
+==Additional methods==
+ * htmlOuter()
+ * getText()
+ * reverse()
