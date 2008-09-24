@@ -8,9 +8,10 @@ Scenario is simple:
 
 Example:
 {{{
-$.server({url: 'http://somesite.com})
+$.server({url: 'http://somesite.com'})
   .find('.my-class')
     .client(function(response){
       $('.destination').html(response);
 });
 }}}
+Since version *0.5.1* (this is *not* phpQuery release version number) there is a support for config file which *authorizes* Ajax hosts and referers.
