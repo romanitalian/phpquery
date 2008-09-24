@@ -1,27 +1,34 @@
-Traversing related methods.
+====Example====
+{{{
+pq('div > p')->add('div > ul')->filter(':has(a)')->find('p:first')->nextAll()->andSelf()->...
+}}}
+====Table of Contents====
+ * [#Filtering Filtering]
+ * [#Finding Finding]
+ * [#Chaining Chaining]
 ====Filtering====
- * *`eq($index)`* Reduce the set of matched elements to a single element.
- * *`hasClass($class)`* Checks the current selection against a class and returns true, if at least one element of the selection has the given class.
- * *`filter($expr)`* Removes all elements from the set of matched elements that do not match the specified expression(s).
- * *`filter($fn)`* Removes all elements from the set of matched elements that does not match the specified function.
- * *`is($expr)`* Checks the current selection against an expression and returns true, if at least one element of the selection fits the given expression.
- * *`map($callback)`* Translate a set of elements in the jQuery object into another set of values in an array (which may, or may not, be elements).
- * *`not($expr)`* Removes elements matching the specified expression from the set of matched elements.
- * *`slice($start, $end)`* Selects a subset of the matched elements.
+ * *[http://docs.jquery.com/Traversing/eq eq($index)]* Reduce the set of matched elements to a single element.
+ * *[http://docs.jquery.com/Traversing/hasClass hasClass($class)]* Checks the current selection against a class and returns true, if at least one element of the selection has the given class.
+ * *[http://docs.jquery.com/Traversing/filter filter($expr)]* Removes all elements from the set of matched elements that do not match the specified expression(s).
+ * *[http://docs.jquery.com/Traversing/filter filter($fn)]* Removes all elements from the set of matched elements that does not match the specified function.
+ * *[http://docs.jquery.com/Traversing/is is($expr)]* Checks the current selection against an expression and returns true, if at least one element of the selection fits the given expression.
+ * *[http://docs.jquery.com/Traversing/map map($callback)]* Translate a set of elements in the jQuery object into another set of values in an array (which may, or may not, be elements).
+ * *[http://docs.jquery.com/Traversing/not not($expr)]* Removes elements matching the specified expression from the set of matched elements.
+ * *[http://docs.jquery.com/Traversing/slice slice($start, $end)]* Selects a subset of the matched elements.
 ====Finding====
- * *`add($expr)`* Adds more elements, matched by the given expression, to the set of matched elements.
- * *`children($expr)`* Get a set of elements containing all of the unique immediate children of each of the matched set of elements.
- * *`contents()`* Find all the child nodes inside the matched elements (including text nodes), or the content document, if the element is an iframe.
- * *`find($expr)`* Searches for all elements that match the specified expression. This method is a good way to find additional descendant elements with which to process.
- * *`next($expr)`* Get a set of elements containing the unique next siblings of each of the given set of elements.
- * *`nextAll($expr)`* Find all sibling elements after the current element.
- * *`parent($expr)`* Get a set of elements containing the unique parents of the matched set of elements.
- * *`parents($expr)`* Get a set of elements containing the unique ancestors of the matched set of elements (except for the root element). The matched elements can be filtered with an optional expression.
- * *`prev($expr)`* Get a set of elements containing the unique previous siblings of each of the matched set of elements.
- * *`prevAll($expr)`* Find all sibling elements before the current element.
- * *`siblings($expr)`* Get a set of elements containing all of the unique siblings of each of the matched set of elements. Can be filtered with an optional expressions.
+ * *[http://docs.jquery.com/Traversing/add add($expr)]* Adds more elements, matched by the given expression, to the set of matched elements.
+ * *[http://docs.jquery.com/Traversing/children children($expr)]* Get a set of elements containing all of the unique immediate children of each of the matched set of elements.
+ * *[http://docs.jquery.com/Traversing/contents contents()]* Find all the child nodes inside the matched elements (including text nodes), or the content document, if the element is an iframe.
+ * *[http://docs.jquery.com/Traversing/find find($expr)]* Searches for all elements that match the specified expression. This method is a good way to find additional descendant elements with which to process.
+ * *[http://docs.jquery.com/Traversing/next next($expr)]* Get a set of elements containing the unique next siblings of each of the given set of elements.
+ * *[http://docs.jquery.com/Traversing/nextAll nextAll($expr)]* Find all sibling elements after the current element.
+ * *[http://docs.jquery.com/Traversing/parent parent($expr)]* Get a set of elements containing the unique parents of the matched set of elements.
+ * *[http://docs.jquery.com/Traversing/parents parents($expr)]* Get a set of elements containing the unique ancestors of the matched set of elements (except for the root element). The matched elements can be filtered with an optional expression.
+ * *[http://docs.jquery.com/Traversing/prev prev($expr)]* Get a set of elements containing the unique previous siblings of each of the matched set of elements.
+ * *[http://docs.jquery.com/Traversing/prevAll prevAll($expr)]* Find all sibling elements before the current element.
+ * *[http://docs.jquery.com/Traversing/siblings siblings($expr)]* Get a set of elements containing all of the unique siblings of each of the matched set of elements. Can be filtered with an optional expressions.
 ====Chaining====
- * *`andSelf()`* Add the previous selection to the current selection.
- * *`end()`* Revert the most recent 'destructive' operation, changing the set of matched elements to its previous state (right before the destructive operation).
+ * *[http://docs.jquery.com/Traversing/andSelf andSelf()]* Add the previous selection to the current selection.
+ * *[http://docs.jquery.com/Traversing/end end()]* Revert the most recent 'destructive' operation, changing the set of matched elements to its previous state (right before the destructive operation).
 
 Read more at [http://docs.jquery.com/Traversing Traversing] section on [http://docs.jquery.com/ jQuery Documentation Site].
