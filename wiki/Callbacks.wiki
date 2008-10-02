@@ -59,4 +59,4 @@ function myCallback($scope, $i, $v, $param4) {
 }
 }}}
 ==Future==
-In the future this functionality will be extended and more methods will support it. Check [http://code.google.com/p/phpquery/issues/detail?id=48 Issue Tracer entry #48] if you're interested in any way.
+In the future this functionality will be extended and more methods will support it. Check [http://code.google.com/p/phpquery/issues/detail?id=48 Issue Tracker entry #48] if you're interested in any way.
