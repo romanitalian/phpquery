@@ -12,10 +12,18 @@ In JavaScript this pattern can be very flexible due to [http://en.wikipedia.org/
 ==PHP callbacks==
 PHP has only simple [http://pl2.php.net/manual/en/function.call-user-func-array.php support for callbacks] so the case is more complicated. That's why [#Param_Structures ParamStructures] has been introduced in phpQuery.
 ==Param Structures==
-Param Structures are lists of params. Such list can contain values defined by programmer or special places where function triggering callback will fill it's own values.
+Param Structures are lists of params. Such list can contain values defined by programmer or special places (CallbackParam objects) where function triggering callback will fill it's own values.
 ====Example 1====
 {{{
-phpQuery::each(array(1,2,3), 'myCallback', 'param1', new CallbackParam, new CallbackParam, 'param4');
+phpQuery::each(
+  // first param is array which will be iterated
+  array(1,2,3),
+  // second param is callback (string or array to call objects method)
+  'myCallback',
+  // rest of params are [#Param_Structures ParamStructure]
+  // CallbackParam objects will be changed to $i and $v by _each_ method
+  'param1', new CallbackParam, new CallbackParam, 'param4'
+);
 function myCallback($param1, $i, $v, $param4) {
   print "Index: $i; Value: $v";
 }
