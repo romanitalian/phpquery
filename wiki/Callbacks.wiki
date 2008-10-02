@@ -4,7 +4,7 @@
  * [#PHP_callbacks PHP callbacks]
  * [#Param_Structures ParamStructures]
  * [#Supported_Methods Supported Methods]
- * [#Scope_Pseudo-Inheritance Scope Pseudo-Inheritance]
+ * [#Scope_Pseudo_Inheritance Scope Pseudo-Inheritance]
 ==What are callbacks==
 Callbacks are functions _called back_ by other functions in proper moment (eg on [http://code.google.com/p/phpquery/wiki/Ajax Ajax] request error).
 ==Java Script callbacks==
@@ -26,7 +26,7 @@ Example above shows how to easily pass custom params to callback using *ParamStr
  * `phpQuery::map()`
  * `pq()->each()`
  * `pq()->each()`
-==Scope Pseudo-Inheritance==
+==Scope Pseudo Inheritance==
 There is easy way to pseudo-inherit scope in PHP. [http://en.wikipedia.org/wiki/Scope_(programming) Scope] means _variables accessible in specified point of code_. It's achieved using [http://php.net/compact compact()] and [http://php.net/extract extract()] functions.
 ====Example 2====
 Look at this modified [#Example_1 example 1]:
