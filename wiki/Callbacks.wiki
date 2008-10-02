@@ -1,13 +1,13 @@
 =Table of Contents=
  * [#What_are_callbacks What are callbacks]
- * [#Java_Script_callbacks JavaScript callbacks]
+ * [#Javascript_callbacks JavaScript callbacks]
  * [#PHP_callbacks PHP callbacks]
  * [#Param_Structures ParamStructures]
  * [#Supported_Methods Supported Methods]
  * [#Scope_Pseudo_Inheritance Scope Pseudo-Inheritance]
 ==What are callbacks==
 Callbacks are functions _called back_ by other functions in proper moment (eg on [http://code.google.com/p/phpquery/wiki/Ajax Ajax] request error).
-==Java Script callbacks==
+==Javascript callbacks==
 In JavaScript this pattern can be very flexible due to [http://en.wikipedia.org/wiki/Closure_(computer_science) Closures] support, which can be inline (no code break) and inherits scope (no need to passing params).
 ==PHP callbacks==
 PHP has only simple [http://pl2.php.net/manual/en/function.call-user-func-array.php support for callbacks] so the case is more complicated. That's why [#Param_Structures ParamStructures] has been introduced in phpQuery.
