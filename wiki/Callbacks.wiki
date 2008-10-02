@@ -33,7 +33,7 @@ Example above shows how to easily pass custom params to callback using [#Param_S
  * `phpQuery::each()`
  * `phpQuery::map()`
  * `pq()->each()`
- * `pq()->each()`
+ * `pq()->map()`
 ==Scope Pseudo Inheritance==
 There is easy way to pseudo-inherit scope in PHP. [http://en.wikipedia.org/wiki/Scope_(programming) Scope] means _variables accessible in specified point of code_. It's achieved using [http://php.net/compact compact()] and [http://php.net/extract extract()] functions.
 ====Example 2====
@@ -49,4 +49,4 @@ function myCallback($scope, $i, $v, $param4) {
   print "Index: $i; Value: $v";
 }
 }}}
-In the future this functionality will be developed.
+In the future this functionality will be developed and more methods will support it.
