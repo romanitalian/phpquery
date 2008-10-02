@@ -1,4 +1,4 @@
-=Table of Conents=
+=Table of Contents=
  * [#What_are_callbacks What are callbacks]
  * [#Java_Script_callbacks JavaScript callbacks]
  * [#PHP_callbacks PHP callbacks]
@@ -35,7 +35,7 @@ Example above shows how to easily pass custom params to callback using [#Param_S
  * `pq()->each()`
  * `pq()->map()`
 ==Scope Pseudo Inheritance==
-There is easy way to pseudo-inherit scope in PHP. [http://en.wikipedia.org/wiki/Scope_(programming) Scope] means _variables accessible in specified point of code_. It's achieved using [http://php.net/compact compact()] and [http://php.net/extract extract()] functions.
+There is an easy way to pseudo inherit scope in PHP. [http://en.wikipedia.org/wiki/Scope_(programming) Scope] means _variables accessible in specified point of code_ (which in other words means _any variable you can use_). It's achieved using [http://php.net/compact compact()] and [http://php.net/extract extract()] functions.
 ====Example 2====
 Look at this modified [#Example_1 example]. Previous comments were removed.
 {{{
