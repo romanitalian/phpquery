@@ -49,6 +49,8 @@ phpQuery::each(
   compact('a', 'b'), new CallbackParam, new CallbackParam, 'param4'
 );
 function myCallback($scope, $i, $v, $param4) {
+  // this is the place where variables from $scope array
+  // are forwarded to actual function's scope
   extract($scope);
   print "Var a: $a";  // will print 'Var a: foo'
   print "Var b: $b";  // will print 'Var a: bar'
