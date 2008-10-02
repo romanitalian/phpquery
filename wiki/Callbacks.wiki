@@ -41,7 +41,11 @@ Look at this modified [#Example_1 example]:
 {{{
 $a = 'foo';
 $b = 'bar';
-phpQuery::each(array(1,2,3), 'myCallback', compact('a', 'b'), new CallbackParam, new CallbackParam, 'param4');
+phpQuery::each(
+  array(1,2,3),
+  'myCallback',
+  compact('a', 'b'), new CallbackParam, new CallbackParam, 'param4'
+);
 function myCallback($scope, $i, $v, $param4) {
   extract($scope);
   print "Var a: $a";
