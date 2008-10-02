@@ -5,6 +5,7 @@
  * [#Param_Structures ParamStructures]
  * [#Supported_Methods Supported Methods]
  * [#Scope_Pseudo_Inheritance Scope Pseudo-Inheritance]
+ * [#Future Future]
 ==What are callbacks==
 Callbacks are functions _called back_ by other functions in proper moment (eg on [http://code.google.com/p/phpquery/wiki/Ajax Ajax] request error).
 ==Javascript callbacks==
@@ -57,4 +58,5 @@ function myCallback($scope, $i, $v, $param4) {
   print "Index: $i; Value: $v";
 }
 }}}
-In the future this functionality will be developed and more methods will support it.
+==Future==
+In the future this functionality will be extended and more methods will support it. Check [http://code.google.com/p/phpquery/issues/detail?id=48 Issue Tracer entry #48] if you're interested in any way.
