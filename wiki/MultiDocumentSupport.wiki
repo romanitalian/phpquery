@@ -3,8 +3,8 @@
  * easy importing of nodes from one document to another
  * pointing document thought
    * phpQuery object
-   * DOMNode object
-   * DOMDocument object
+   * [http://www.php.net/manual/en/class.domnode.php DOMNode] object
+   * [http://www.php.net/manual/en/class.domdocument.php DOMDocument] object
    * internal document ID
  * last created (or selected) document is assumed to be default in pq();
 ==What MultiDocumentSupport is NOT==
@@ -46,7 +46,7 @@ pq('li', $doc4);
  * phpQuery::*getDocumentID*($source) Returns $source's document ID
  * phpQuery::*getDOMDocument*($source) Get DOMDocument object related to $source
 ==Object Methods==
- * $pq->*toReference*(&$var) Saves actual object to $var by reference
- * $pq->*getDocumentIDRef*(&$documentID) Saves object's DocumentID to $var by reference
+ * $pq->*getDocument*() Returns object with stack set to document root
  * $pq->*getDocumentID*() Get object's Document ID
+ * $pq->*getDocumentIDRef*(&$documentID) Saves object's DocumentID to $var by reference
  * $pq->*unloadDocument*() Unloads whole document from memory
