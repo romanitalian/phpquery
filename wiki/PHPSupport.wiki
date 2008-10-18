@@ -44,7 +44,7 @@ There is a special [http://code.google.com/p/phpquery/wiki/Callbacks Callbacks] 
 ==PHP Code Support==
 ====Opening PHP files as DOM====
 PHP files can be opened using *phpQuery::newDocumentPHP($markup)* or *phpQuery::newDocumentFilePHP($file)*. Such files are visible as DOM, where:
- * PHP tags (beetween DOM elements) are available (querieble) as `<php> ...code ...</php>`
+ * PHP tags beetween DOM elements are available (queryable) as `<php> ...code... </php>`
  * PHP tags inside attributes are HTML entities
  * PHP tags between DOM element's attributes are *not yet supported*
 ====Inputting PHP code====
