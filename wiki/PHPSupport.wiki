@@ -8,6 +8,8 @@ Although *phpQuery* is *jQuery* port, there is extensive PHP-specific support.
    * [#Countable Countable Interface]
  * [http://code.google.com/p/phpquery/wiki/Callbacks Callbacks]
  * [#PHP_Code_Support PHP Code Support]
+   * [#Outputting_PHP_code Outputting PHP code]
+   * [#Inputting_PHP_code Inputting PHP code]
 
 ==Class Interfaces==
 phpQuery implements some of [http://pl.php.net/spl Standard PHP Library (SPL)] interfaces.
