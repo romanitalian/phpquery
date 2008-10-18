@@ -1,0 +1,14 @@
+*phpQuery* depends on following code parts:
+ * [#PHP5]
+ * [#DOM_extension PHP5 DOM extension]
+ * [#Zend_Framework]
+
+==PHP5==
+Required version of PHP is [http://www.php.net/ PHP5], *5.2* recommended.
+
+==DOM extension==
+PHP5's build-in [http://php.net/manual/en/book.dom.php DOM extension] is required. Users of 
+[http://www.apachefriends.org/en/xampp-windows.html windows XAMPP] (and maybe other unofficial PHP distributions) need to disable depracated [http://php.net/manual/en/ref.domxml.php DOM XML] extension. More information can be found in [http://mrclay.org/index.php/2008/10/08/getting-phpquery-running-under-xampp-for-windows/ this post on mrclay.org]
+
+==Zend Framework==
+[http://framework.zend.com/ Zend Framework] is used as HTTP Client and JSON encoder. Those who already have Zend Framework in their applications, can remove directory */phpQuery/Zend*. Only condition is having proper include path set for own copy of the library.
