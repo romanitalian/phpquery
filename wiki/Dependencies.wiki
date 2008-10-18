@@ -1,7 +1,7 @@
 *phpQuery* depends on following code parts:
- * [#PHP5]
+ * [#PHP5 PHP5]
  * [#DOM_extension PHP5 DOM extension]
- * [#Zend_Framework]
+ * [#Zend_Framework Zend Framework]
 
 ==PHP5==
 Required version of PHP is [http://www.php.net/ PHP5], *5.2* recommended.
