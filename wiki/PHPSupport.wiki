@@ -2,15 +2,14 @@
 Although *phpQuery* is *jQuery* port, there is extensive PHP-specific support.
 
 =Table of Contents=
- * [#PHP_Interfaces PHP Interfaces]
+ * [#Class_Interfaces Class Interfaces]
    * [#Iterator Iterator Interface]
    * [#Array_Access ArrayAccess]
    * [#Countable Countable Interface]
  * [http://code.google.com/p/phpquery/wiki/Callbacks Callbacks]
- * [#PHP_Code_Injection PHP Code Injection]
-   * [#PHP_Tags PHP Tags]
+ * [#PHP_Code_Support PHP Code Support]
 
-==PHP Interfaces==
+==Class Interfaces==
 phpQuery implements some of [http://pl.php.net/spl Standard PHP Library (SPL)] interfaces.
 ====Iterator====
 Iterator interface allows looping objects thou native PHP *foreach loop*. Example:
@@ -39,7 +38,8 @@ print count(pq('ul:first > li'));
 }}}
 ==Callbacks==
 There is a special [http://code.google.com/p/phpquery/wiki/Callbacks Callbacks] wiki section, to which you should refer to.
-==PHP Code Injection==
+==PHP Code Support==
+====Inputting PHP code====
 Additional methods allows placing PHP code inside DOM. Below each method visible is it's logic equivalent.
  * *attrPHP*($attr, $code)
    * [http://docs.jquery.com/Attributes/attr attr]($attr, "<?php $code ?>")
@@ -63,5 +63,5 @@ Additional methods allows placing PHP code inside DOM. Below each method visible
    * [http://docs.jquery.com/Manipulation/wrapInner wrapInner]("<?php $codeBefore?><?php $codeAfter ?>")
  * *replaceWithPHP*($code)
    * [http://docs.jquery.com/Manipulation/replaceWith replaceWith]("<?php $code ?>")
-====PHP Tags====
-Methods from section above doesn't inject runnable code. For safety reasons, file (or it's content) need to be passed thru *`phpQuery::unsafePHPTags()`* method. This can be done only once, just before outputting the content, because return value is just a *string* not *phpQuery object*.
+====Outputting PHP code====
+Code inserted with methods above won't be returned as valid (runnable) using classic output methods such as *html()*. To make it work, *php()* method without parameter have to be used. Optionaly *phpQuery::markupToPHP($markup)* can activate tags in string outputed before.
