@@ -30,8 +30,11 @@ If you like writing arrays, with phpQuery you can still do it, thanks to the Arr
 $pq = phpQuery::newDocumentFile('somefile.html');
 // print first list outer HTML
 print $pq['ul:first'];
-// change outer HTML of second direct LI element of first list
-$pq['ul:first > li:eq(1)'] = '<p>new outer HTML</p>';
+// change INNER HTML of second direct LI element of first list
+$pq['ul:first > li:eq(1)'] = 'new inner html of second LI directly in first UL';
+// now look at the difference (outer vs inner)
+print $pq['ul:first > li:eq(1)'];
+// will print <li>new inner html of second LI directly in first UL</li>
 }}}
 ====Countable====
 If used to do `count($something)` you can still do this that way, instead of eg `pq('p')->size()`.
