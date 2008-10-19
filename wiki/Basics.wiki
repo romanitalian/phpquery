@@ -4,10 +4,10 @@ phpQuery::newDocumentFileXHTML('my-xhtml.html')->find('p');
 }}}
 =Table of Contents=
  * [#Loading_documents Loading documents]
- * [#Pq_Function pq() function]
+ * [#pq()_function pq() function]
 
 ==Loading documents==
- * phpQuery::*newDocument*($html, $contentType = null) Creates new document from markup. If no $contentType, autodetection is made (based on markup). If it fails, text/html in utf-8 is default.
+ * phpQuery::*newDocument*($html, $contentType = null) Creates new document from markup. If no $contentType, autodetection is made (based on markup). If it fails, text/html in utf-8 is used.
  * phpQuery::*newDocumentFile*($file, $contentType = null) Creates new document from file. Works like newDocument()
  * phpQuery::*newDocumentHTML*($html, $charset = 'utf-8')
  * phpQuery::*newDocumentXHTML*($html, $charset = 'utf-8')
@@ -19,3 +19,4 @@ phpQuery::newDocumentFileXHTML('my-xhtml.html')->find('p');
  * phpQuery::*newDocumentFilePHP*($file, $contentType) Read more about it on [http://code.google.com/p/phpquery/wiki/PHPSupport PHPSupport page]
 ==pq() function==
 // TODO
+*pq*($param, $context = null)
