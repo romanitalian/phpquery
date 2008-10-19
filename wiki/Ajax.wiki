@@ -1,4 +1,3 @@
-#labels Featured
 ==Example==
 {{{
 pq('#element')->load('http://somesite.com/page .inline-selector')->...
