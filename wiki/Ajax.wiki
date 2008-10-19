@@ -4,6 +4,7 @@ pq('#element')->load('http://somesite.com/page .inline-selector')->...
 }}}
 =Table of Contents=
  * [#Server_Side_Ajax Server Side Ajax]
+ * [#Cross_Domain_Ajax Cross Domain Ajax]
  * [#Ajax_Requests Ajax Requests]
  * [#Ajax_Events Ajax Events]
  * [#Misc Misc]
@@ -11,6 +12,22 @@ pq('#element')->load('http://somesite.com/page .inline-selector')->...
 Ajax, standing for _Asynchronous JavaScript and XML_ is combination of HTTP Client and XML parser which doesn't lock program's thread (doing request in asynchronous way).
 
 *phpQuery* also offers such functionality, making use of solid quality [http://framework.zend.com/manual/en/zend.http.html Zend_Http_Client]. Unfortunately requests aren't asynchronous, but nothing is impossible. For today, instead of [http://en.wikipedia.org/wiki/XMLHttpRequest XMLHttpRequest] you always get Zend_Http_Client instance. API unification is [http://code.google.com/p/phpquery/issues/detail?id=44 planned].
+==Cross Domain Ajax==
+For security reasons, by default *phpQuery* doesn't allow connections to hosts other than actual `$_SERVER['HTTP_HOST']`. Developer needs to grant rights to other hosts before making an [http://code.google.com/p/phpquery/wiki/Ajax Ajax] request.
+
+There are 2 methods for allowing other hosts
+ * phpQuery::*ajaxAllowURL*($url)
+ * phpQuery::*ajaxAllowHost*($host)
+
+{{{
+// connect to google.com
+phpQuery::ajaxAllowHost('google.com');
+phpQuery::get('http://google.com/ig');
+// or using same string
+$url = 'http://google.com/ig';
+phpQuery::ajaxAllowURL($url);
+phpQuery::get($url);
+}}}
 ==Ajax Requests==
  * *[http://docs.jquery.com/Ajax/jQuery.ajax phpQuery::ajax]*[http://docs.jquery.com/Ajax/jQuery.ajax ($options)] Load a remote page using an HTTP request.
  * *[http://docs.jquery.com/Ajax/load load]*[http://docs.jquery.com/Ajax/load ($url, $data, $callback)] Load HTML from a remote file and inject it into the DOM.
