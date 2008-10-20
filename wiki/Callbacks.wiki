@@ -1,9 +1,9 @@
 =Table of Contents=
  * [#What_are_callbacks What are callbacks]
  * [#phpQuery_callbacks phpQuery callback system]
-   * [#Callback_class Callback class]
-   * [#CallbackParam_class CallbackParam class]
-   * [#CallbackReference_class CallbackReference class]
+   * [#Callback Callback class]
+   * [#CallbackParam CallbackParam class]
+   * [#CallbackReference CallbackReference class]
  * [#Scope_Pseudo_Inheritance Scope Pseudo-Inheritance]
 ==What are callbacks==
 Callbacks are functions _called back_ by other functions in proper moment (eg on [http://code.google.com/p/phpquery/wiki/Ajax Ajax] request error).
@@ -13,7 +13,7 @@ In *JavaScript* this pattern can be very flexible due to [http://en.wikipedia.or
 *PHP* has only simple [http://pl2.php.net/manual/en/function.call-user-func-array.php support for callbacks] so the case is more complicated. That's why phpQuery extends callback support by it's own.
 ==phpQuery callback system==
 phpQuery uses it's own approach to callbacks. This task is achieved thou *Callback*, *CallbackParam* and *CallbackReference* classes.
-===Callback class===
+===Callback===
 Callback class is used for wrapping valid callbacks with params.
 ====Example 1====
 {{{
@@ -28,7 +28,7 @@ phpQuery::get($url,
 // and $param2 will be parameter passed by function calling callback
 // which in this example would be ajax request result
 }}}
-===CallbackParam class===
+===CallbackParam===
 As we can see in [#Example_1 last example], new instance of CallbackParam class is used for defining places, where original callback parameter(s) will be placed. Such pattern can be used also without Callback class for some methods.
 ====Example 2====
 {{{
@@ -50,7 +50,7 @@ Methods supporting CallbackParam *without* using Callback class:
  * `phpQuery::map()`
  * `pq()->each()`
  * `pq()->map()`
-===CallbackReference class===
+===CallbackReference===
 Finally, CallbackReference can be used when don't really want to use a callback, only thing we want is it's parameter's value. CallbackReference takes first parameters value and passes it's thou reference. Thanks to that, we can use *if statement* insted of *callback function*.
 ====Example 3====
 {{{
