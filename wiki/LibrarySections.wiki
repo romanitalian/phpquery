@@ -1,5 +1,6 @@
 #labels Featured
 =phpQuery Sections=
+ # [http://code.google.com/p/phpquery/wiki/Basics Basics]
  # *jQuery derived*
    # [http://code.google.com/p/phpquery/wiki/Selectors Selectors]
    # [http://code.google.com/p/phpquery/wiki/Attributes Attributes]
