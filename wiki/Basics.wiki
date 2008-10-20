@@ -1,6 +1,7 @@
 ==Example==
 {{{
 phpQuery::newDocumentFileXHTML('my-xhtml.html')->find('p');
+$ul = pq('ul');
 }}}
 =Table of Contents=
  * [#Loading_documents Loading documents]
@@ -18,5 +19,36 @@ phpQuery::newDocumentFileXHTML('my-xhtml.html')->find('p');
  * phpQuery::*newDocumentFileXML*($file, $charset = 'utf-8')
  * phpQuery::*newDocumentFilePHP*($file, $contentType) Read more about it on [http://code.google.com/p/phpquery/wiki/PHPSupport PHPSupport page]
 ==pq function==
-// TODO
-*pq*($param, $context = null)
+*`pq($param, $context = null);`*
+
+*pq();* function is equivalent of jQuery's *$();*. It's used for 3 type of things:
+ # Importing markup
+{{{
+// Import into selected document:
+// doesn't accept text nodes at beginning of input string
+pq('<div/>')
+// Import into document with ID from $pq->getDocumentID():
+pq('<div/>', $pq->getDocumentID())
+// Import into same document as DOMNode belongs to:
+pq('<div/>', DOMNode)
+// Import into document from phpQuery object:
+pq('<div/>', $pq)
+}}}
+ # Running queries
+{{{
+// Run query on last selected document:
+pq('div.myClass')
+// Run query on document with ID from $pq->getDocumentID():
+pq('div.myClass', $pq->getDocumentID())
+// Run query on same document as DOMNode belongs to and use node(s)as root for query:
+pq('div.myClass', DOMNode)
+// Run query on document from phpQuery object 
+// and use object's stack as root node(s) for query:
+pq('div.myClass', $pq)
+}}}
+ # Wrapping DOMNodes with phpQuery objects
+{{{
+foreach(pq('li') as $li)
+  // $li is pure DOMNode, change it to phpQuery object
+  pq($li);
+}}}
