@@ -1,20 +1,26 @@
 ==Using plugins==
- * phpQuery::plugin('example')
- * phpQuery::plugin('example', 'plugins/example.php')
- * pq('ul')->plugin('example')
- * pq('ul')->plugin('example', 'plugins/example.php')
+Plugins are loaded using *plugin* method from phpQueryObject or phpQuery static namespace.
+{{{
+// all calls to plugin below are equal
+phpQuery::plugin('example')
+phpQuery::plugin('example', 'example.php')
+pq('ul')->plugin('example')
+pq('ul')->plugin('example', 'example.php')
+}}}
 ==Writing plugins==
-Plugin consist from 2 classes - first extending *phpQueryObjects* (result of pq(); function) and second, extending static *phpQuery* namespace. Plugin classes are never intialized, just method calls are forwarded in static way from phpQuery.
+Plugin consist from 2 classes - first extending *phpQueryObjects* (result of pq(); function) and second, extending static *phpQuery->$plugins* namespace. Plugin classes are never intialized, just method calls are forwarded in static way from phpQuery.
+
+If you need to write plugin only for simple task, write a *script* using ScriptsPlugin.
 
 Code visible below is also available as [http://code.google.com/p/phpquery/source/browse/branches/dev/phpQuery/plugins/example.php colored syntax].
 ====Extending phpQueryObject====
+{{{
 /**
  * phpQuery plugin class extending phpQuery object.
  * Methods from this class are callable on every phpQuery object.
  *
  * Class name prefix 'phpQueryObjectPlugin_' must be preserved.
  */
-{{{
 abstract class phpQueryObjectPlugin_example {
 	/**
 	 * Limit binded methods.
