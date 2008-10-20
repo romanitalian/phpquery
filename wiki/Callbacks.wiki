@@ -51,7 +51,7 @@ Methods supporting CallbackParam *without* using Callback class:
  * `pq()->each()`
  * `pq()->map()`
 ===CallbackReference===
-Finally, CallbackReference can be used when don't really want to use a callback, only thing we want is it's parameter's value. CallbackReference takes first parameters value and passes it's thou reference. Thanks to that, we can use *if statement* insted of *callback function*.
+Finally, CallbackReference can be used when we don't really want a callback, only parameter passed to it. CallbackReference takes first parameter's value and passes it to reference. Thanks to that, we can use *if statement* instead of *callback function*.
 ====Example 3====
 {{{
 $html;
