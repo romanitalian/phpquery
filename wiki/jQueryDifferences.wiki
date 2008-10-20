@@ -1,5 +1,10 @@
 =This page is TODO=
 ==Additional methods==
  * htmlOuter()
- * getText()
+ * getString()
  * reverse()
+ * xml()
+ * xmlOuter()
+ * all from [http://code.google.com/p/phpquery/wiki/PHPSupport PHPSupport]
+ * all from [http://code.google.com/p/phpquery/wiki/Basic Basic]
+ * all from [http://code.google.com/p/phpquery/wiki/MultiDocumentSupport MultiDocumentSupport]
