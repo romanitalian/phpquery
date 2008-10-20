@@ -1,20 +1,36 @@
 =Table of Contents=
  * [#What_are_callbacks What are callbacks]
- * [#Javascript_callbacks JavaScript callbacks]
- * [#PHP_callbacks PHP callbacks]
- * [#Param_Structures ParamStructures]
- * [#Supported_Methods Supported Methods]
+ * [#phpQuery_callbacks phpQuery callback system]
+   * [#Callback_class Callback class]
+   * [#CallbackParam_class CallbackParam class]
+   * [#CallbackReference_class CallbackReference class]
  * [#Scope_Pseudo_Inheritance Scope Pseudo-Inheritance]
- * [#Future Future]
 ==What are callbacks==
 Callbacks are functions _called back_ by other functions in proper moment (eg on [http://code.google.com/p/phpquery/wiki/Ajax Ajax] request error).
-==Javascript callbacks==
-In JavaScript this pattern can be very flexible due to [http://en.wikipedia.org/wiki/Closure_(computer_science) Closures] support, which can be inline (no code break) and inherits scope (no need to passing params).
-==PHP callbacks==
-PHP has only simple [http://pl2.php.net/manual/en/function.call-user-func-array.php support for callbacks] so the case is more complicated. That's why [#Param_Structures ParamStructures] has been introduced in phpQuery.
-==Param Structures==
-Param Structures are lists of params. Such list can contain values defined by programmer or special places (CallbackParam objects) where function triggering callback will fill it's own values.
+
+In *JavaScript* this pattern can be very flexible due to [http://en.wikipedia.org/wiki/Closure_(computer_science) Closures] support, which can be inline (no code break) and inherits scope (no need to passing params).
+
+*PHP* has only simple [http://pl2.php.net/manual/en/function.call-user-func-array.php support for callbacks] so the case is more complicated. That's why phpQuery extends callback support by it's own.
+==phpQuery callback system==
+phpQuery uses it's own approach to callbacks. This task is achieved thou *Callback*, *CallbackParam* and *CallbackReference* classes.
+===Callback class===
+Callback class is used for wrapping valid callbacks with params.
 ====Example 1====
+{{{
+function myCallback($param1, $param2) {
+  var_dump($param1);
+  var_dump($param2);
+}
+phpQuery::get($url, 
+  new Callback('myCallback', 'myParam1', new CallbackParam)
+);
+// now $param1 in myCallback will have value 'myParam1'
+// and $param2 will be parameter passed by function calling callback
+// which in this example would be ajax request result
+}}}
+===CallbackParam class===
+As we can see in [#Example_1 last example], new instance of CallbackParam class is used for defining places, where original callback parameter(s) will be placed. Such pattern can be used also without Callback class for some methods.
+====Example 2====
 {{{
 phpQuery::each(
   // first param is array which will be iterated
@@ -29,16 +45,29 @@ function myCallback($param1, $i, $v, $param4) {
   print "Index: $i; Value: $v";
 }
 }}}
-Example above shows how to easily pass custom params to callback using [#Param_Structures ParamStructures].
-==Supported Methods==
+Methods supporting CallbackParam *without* using Callback class:
  * `phpQuery::each()`
  * `phpQuery::map()`
  * `pq()->each()`
  * `pq()->map()`
+===CallbackReference class===
+Finally, CallbackReference can be used when don't really want to use a callback, only thing we want is it's parameter's value. CallbackReference takes first parameters value and passes it's thou reference. Thanks to that, we can use *if statement* insted of *callback function*.
+====Example 3====
+{{{
+$html;
+phpQuery::get($url, new CallbackReference($html));
+if ($html) {
+  // callback triggered, value non-false
+  phpQuery::get($url, new CallbackReference($html));
+  if ($html) {
+    // we just skipped 2 function declarations
+  }
+}
+}}}
 ==Scope Pseudo Inheritance==
 There is an easy way to pseudo inherit scope in PHP. [http://en.wikipedia.org/wiki/Scope_(programming) Scope] means _variables accessible in specified point of code_ (which in other words means _any variable you can use_). It's achieved using [http://php.net/compact compact()] and [http://php.net/extract extract()] functions.
-====Example 2====
-Look at this modified [#Example_1 example]. Previous comments were removed.
+====Example 4====
+Look at this modified [#Example_2 example 2]. Previous comments were removed.
 {{{
 $a = 'foo';
 $b = 'bar';
