@@ -1,4 +1,3 @@
-#labels Featured
 jQuery ports to server-side languages:
  * *PHP* - [http://code.google.com/p/phpquery/ phpQuery]
  * *ActionScript* - [http://tech.nitoyon.com/blog/2008/01/as3query_alpha.html as3query]
