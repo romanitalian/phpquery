@@ -1,0 +1,11 @@
+====Checkout latest release====
+{{{
+svn checkout http://phpquery.googlecode.com/svn/trunk/ phpQuery
+}}}
+====Checkout developer branch====
+{{{
+svn checkout http://phpquery.googlecode.com/svn/branches/dev/ phpQuery-dev
+}}}
+SVN changelog is available thou [http://code.google.com/p/phpquery/source/list Web interface] and [http://code.google.com/feeds/p/phpquery/svnchanges/basic RSS].
+
+Get SVN for windows from [http://tortoisesvn.tigris.org/ TortoiseSVN].
