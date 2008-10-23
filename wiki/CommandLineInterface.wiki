@@ -9,7 +9,7 @@ Docs: http://code.google.com/p/phpquery/wiki/
 ==Example==
 Fetch number of downloads of all release packages.
 {{{
-phpquery 'http://code.google.com/p/phpquery/downloads/list?can=1'\
-  --find '.vt.col_4 a' --contents\
+phpquery 'http://code.google.com/p/phpquery/downloads/list?can=1' \
+  --find '.vt.col_4 a' --contents \
   --getString null array_sum
 }}}
