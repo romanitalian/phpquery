@@ -1,4 +1,5 @@
 =This page is TODO=
+phpQuery differences agains jQuery.
 ==Additional methods==
  * htmlOuter()
  * getString()
