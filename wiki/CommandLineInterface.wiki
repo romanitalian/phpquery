@@ -1,3 +1,4 @@
+#labels Featured
 phpQuery features CommandLineInterface aka CLI.
 {{{
 Usage: phpquery URL --method1 arg1 arg2 argN --method2 arg1 arg2 argN ...
