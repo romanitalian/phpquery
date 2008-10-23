@@ -12,7 +12,6 @@ Plugin consist from 2 classes - first extending *phpQueryObjects* (result of pq(
 
 If you need to write plugin only for simple task, write a *script* using ScriptsPlugin.
 
-Code visible below is also available as [http://code.google.com/p/phpquery/source/browse/branches/dev/phpQuery/plugins/example.php colored syntax].
 ====Extending phpQueryObject====
 {{{
 /**
