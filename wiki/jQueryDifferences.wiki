@@ -1,2 +1,2 @@
 #labels Deprecated
-Renamed to jQueryPortingState.
+Renamed to [http://code.google.com/p/phpquery/wiki/jQueryPortingState jQueryPortingState].
