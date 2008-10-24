@@ -2,6 +2,6 @@ In [http://code.google.com/p/phpquery/issues/list Issue Tracker] there is a list
 ==JSON==
 Port of [http://jollytoad.googlepages.com/json.js JSON] plugin.
 {{{
-phpQuery::toJSON( pq('form')->serializeArray() );
-phpQuery::parseJSON('{"foo": "bar"}');
+$jsonString = phpQuery::toJSON( pq('form')->serializeArray() );
+$array = phpQuery::parseJSON('{"foo": "bar"}');
 }}}
