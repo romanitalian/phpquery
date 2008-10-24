@@ -1,5 +1,4 @@
 #labels Featured
-=phpQuery Sections=
  # [http://code.google.com/p/phpquery/wiki/Basics Basics]
  # *jQuery derived*
    # [http://code.google.com/p/phpquery/wiki/Selectors Selectors]
@@ -11,8 +10,10 @@
    # [http://code.google.com/p/phpquery/wiki/Utilities Utilities]
    # [http://code.google.com/p/phpquery/wiki/PluginsClientSidePorts Plugin ports]
  # [http://code.google.com/p/phpquery/wiki/PHPSupport PHP Support]
+ # [http://code.google.com/p/phpquery/wiki/CommandLineInterface Command Line Interface]
  # [http://code.google.com/p/phpquery/wiki/MultiDocumentSupport Multi document support]
  # [http://code.google.com/p/phpquery/wiki/PluginsServerSide Plugins]
    # [http://code.google.com/p/phpquery/wiki/WebBrowser WebBrowser]
    # [http://code.google.com/p/phpquery/wiki/ScriptsPlugin Scripts]
  # [http://code.google.com/p/phpquery/wiki/jQueryServer jQueryServer]
+ # [http://code.google.com/p/phpquery/wiki/Debugging Debugging]
