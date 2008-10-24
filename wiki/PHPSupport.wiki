@@ -1,5 +1,5 @@
 #labels Featured,Phase-Implementation
-Although *phpQuery* is *jQuery* port, there is extensive PHP-specific support.
+Although *phpQuery* is a [http://code.google.com/p/phpquery/wiki/jQueryPortingState jQuery port], there is extensive PHP-specific support.
 
 =Table of Contents=
  * [#Class_Interfaces Class Interfaces]
