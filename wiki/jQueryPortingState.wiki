@@ -1,0 +1,22 @@
+phpQuery is almost a full port of the [http://jquery.com/ jQuery JavaScript Library].
+
+== Ported Sections ==
+   # [http://code.google.com/p/phpquery/wiki/Selectors Selectors]
+   # [http://code.google.com/p/phpquery/wiki/Attributes Attributes]
+   # [http://code.google.com/p/phpquery/wiki/Traversing Traversing]
+   # [http://code.google.com/p/phpquery/wiki/Manipulation Manipulation]
+   # [http://code.google.com/p/phpquery/wiki/Ajax Ajax]
+   # [http://code.google.com/p/phpquery/wiki/Events Events]
+   # [http://code.google.com/p/phpquery/wiki/Utilities Utilities]
+   # [http://code.google.com/p/phpquery/wiki/PluginsClientSidePorts Plugin ports]
+
+== Additional methods ==
+phpQuery features many additional methods comparing to jQuery:
+ * htmlOuter()
+ * xml()
+ * xmlOuter()
+ * getString()
+ * reverse()
+ * all from [http://code.google.com/p/phpquery/wiki/PHPSupport PHPSupport]
+ * all from [http://code.google.com/p/phpquery/wiki/Basic Basic]
+ * all from [http://code.google.com/p/phpquery/wiki/MultiDocumentSupport MultiDocumentSupport]
