@@ -1,0 +1,6 @@
+{{{
+To see a debugging messages, use this
+phpQuery::$debug = 1;
+// for debugging document loading (newDocument())
+phpQuery::$debug = 2;
+}}}
