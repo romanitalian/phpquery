@@ -1,6 +1,6 @@
 #labels Featured
  # [http://code.google.com/p/phpquery/wiki/Basics Basics]
- # *jQuery derived*
+ # [http://code.google.com/p/phpquery/wiki/jQueryPortingState jQuery derived]
    # [http://code.google.com/p/phpquery/wiki/Selectors Selectors]
    # [http://code.google.com/p/phpquery/wiki/Attributes Attributes]
    # [http://code.google.com/p/phpquery/wiki/Traversing Traversing]
