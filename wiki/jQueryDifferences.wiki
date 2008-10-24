@@ -1,11 +1,2 @@
-=This page is TODO=
-phpQuery differences agains jQuery.
-==Additional methods==
- * htmlOuter()
- * getString()
- * reverse()
- * xml()
- * xmlOuter()
- * all from [http://code.google.com/p/phpquery/wiki/PHPSupport PHPSupport]
- * all from [http://code.google.com/p/phpquery/wiki/Basic Basic]
- * all from [http://code.google.com/p/phpquery/wiki/MultiDocumentSupport MultiDocumentSupport]
+#labels Deprecated
+Renamed to jQueryPortingState.
