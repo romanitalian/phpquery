@@ -1,6 +1,10 @@
 ==Example==
 {{{
 pq('form')->bind('submit', 'submitHandler')->trigger('submit')->...
+function submitHandler($e) {
+  print 'Target: '.$e->target->tagName;
+  print 'Bubbling ? '.$e->currentTarget->tagName;
+}
 }}}
 =Table of Contents=
  * [#Server_Side_Events Server Side Events]
@@ -12,6 +16,12 @@ pq('form')->bind('submit', 'submitHandler')->trigger('submit')->...
 phpQuery support *server-side* events, same as jQuery handle client-side ones. On server there isn't, of course, events such as _mouseover_ (but they can be triggered).
 
 By default, phpQuery automatically fires up only *change* event for form elements. If you load WebBrowser plugin, *submit* and *click* will be handled properly - eg submitting form with inputs' data to action URL via new [http://code.google.com/p/phpquery/wiki/Ajax Ajax] request.
+
+$this (`this` in JS) context for handler scope *isn't available*. You have to use one of following manually:
+ * $event->*target*
+ * $event->*currentTarget*
+ * $event->*relatedTarget*
+
 ==Page Load==
 _none_
 ==Event Handling==
@@ -25,8 +35,6 @@ _none_
 ==Event Helpers==
  * *[http://docs.jquery.com/Events/change change]*[http://docs.jquery.com/Events/change ()] Triggers the change event of each matched element.
  * *[http://docs.jquery.com/Events/change change]*[http://docs.jquery.com/Events/change ($fn)] Binds a function to the change event of each matched element.
- * *[http://docs.jquery.com/Events/select select]*[http://docs.jquery.com/Events/select ()] Trigger the select event of each matched element.
- * *[http://docs.jquery.com/Events/select select]*[http://docs.jquery.com/Events/select ($fn)] Bind a function to the select event of each matched element.
  * *[http://docs.jquery.com/Events/submit submit]*[http://docs.jquery.com/Events/submit ()] Trigger the submit event of each matched element.
  * *[http://docs.jquery.com/Events/submit submit]*[http://docs.jquery.com/Events/submit ($fn)] Bind a function to the submit event of each matched element.
 
