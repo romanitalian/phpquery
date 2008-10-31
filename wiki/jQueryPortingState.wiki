@@ -15,8 +15,13 @@ phpQuery features many additional methods comparing to jQuery:
  * htmlOuter()
  * xml()
  * xmlOuter()
+ * markup()
+ * markupOuter()
  * getString()
  * reverse()
  * all from [http://code.google.com/p/phpquery/wiki/PHPSupport PHPSupport]
  * all from [http://code.google.com/p/phpquery/wiki/Basic Basic]
  * all from [http://code.google.com/p/phpquery/wiki/MultiDocumentSupport MultiDocumentSupport]
+
+== Other Differences ==
+ * [http://code.google.com/p/phpquery/wiki/Events?ts=1225458859&updated=Events#Server_Side_Events Server Side Events]
