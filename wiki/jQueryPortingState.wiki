@@ -19,6 +19,8 @@ phpQuery features many additional methods comparing to jQuery:
  * markupOuter()
  * getString()
  * reverse()
+ * contentsUnwrap()
+ * switchWith()
  * all from [http://code.google.com/p/phpquery/wiki/PHPSupport PHPSupport]
  * all from [http://code.google.com/p/phpquery/wiki/Basic Basic]
  * all from [http://code.google.com/p/phpquery/wiki/MultiDocumentSupport MultiDocumentSupport]
