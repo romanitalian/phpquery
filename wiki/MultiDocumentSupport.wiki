@@ -34,7 +34,8 @@ pq('li', $doc2->find('ul:first')->get());
 // this will find all LIs in whole $doc2 (not a context query)
 pq('li', $doc2->find('ul:first')->getDocumentID());
 // this will transparently load $doc4 into phpQuery::$documents
-// and than all LIs will be found
+// and then all LIs will be found
+// TODO this example must be verified
 pq('li', $doc4); 
 }}}
 ==Static Methods==
