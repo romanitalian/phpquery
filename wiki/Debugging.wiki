@@ -1,6 +1,10 @@
 {{{
 // To see a debugging messages, use this
 phpQuery::$debug = 1;
-// for debugging document loading (newDocument())
+// for debugging document loading (phpQuery::newDocument() etc)
 phpQuery::$debug = 2;
+// debug inside chain
+pq('.foo')->dump()->...;
+pq('.foo')->dumpWhois()->...;
+pq('.foo')->dumpDie()->...;
 }}}
