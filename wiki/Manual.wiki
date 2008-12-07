@@ -17,5 +17,6 @@
    # [http://code.google.com/p/phpquery/wiki/ScriptsPlugin Scripts]
  # [http://code.google.com/p/phpquery/wiki/jQueryServer jQueryServer]
  # [http://code.google.com/p/phpquery/wiki/Debugging Debugging]
+ # Bootstrap file
 
 *[http://meta20.net/phpquery-api/ API Reference]* is also available.
