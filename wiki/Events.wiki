@@ -1,3 +1,11 @@
+=Table of Contents=
+ * [#Example Example]
+ * [#Server_Side_Events Server Side Events]
+ * [#Page_Load Page Load]
+ * [#Event_Handling Event Handling]
+ * [#Interaction_Helpers Interaction Helpers]
+ * [#Event_Helpers Event Helpers]
+
 ==Example==
 {{{
 pq('form')->bind('submit', 'submitHandler')->trigger('submit')->...
@@ -6,12 +14,7 @@ function submitHandler($e) {
   print 'Bubbling ? '.$e->currentTarget->tagName;
 }
 }}}
-=Table of Contents=
- * [#Server_Side_Events Server Side Events]
- * [#Page_Load Page Load]
- * [#Event_Handling Event Handling]
- * [#Interaction_Helpers Interaction Helpers]
- * [#Event_Helpers Event Helpers]
+
 ==Server Side Events==
 phpQuery support *server-side* events, same as jQuery handle client-side ones. On server there isn't, of course, events such as _mouseover_ (but they can be triggered).
 
@@ -24,14 +27,17 @@ $this (`this` in JS) context for handler scope *isn't available*. You have to us
 
 ==Page Load==
 _none_
+
 ==Event Handling==
  * *[http://docs.jquery.com/Events/bind bind]*[http://docs.jquery.com/Events/bind ($type, $data, $fn)] Binds a handler to one or more events (like click) for each matched element. Can also bind custom events.
  * *[http://docs.jquery.com/Events/one one]*[http://docs.jquery.com/Events/one ($type, $data, $fn)] Binds a handler to one or more events to be executed once for each matched element.
  * *[http://docs.jquery.com/Events/trigger trigger]*[http://docs.jquery.com/Events/trigger ($type , $data )] Trigger a type of event on every matched element.
  * *[http://docs.jquery.com/Events/triggerHandler triggerHandler]*[http://docs.jquery.com/Events/triggerHandler ($type , $data )] This particular method triggers all bound event handlers on an element (for a specific event type) WITHOUT executing the browsers default actions.
  * *[http://docs.jquery.com/Events/unbind unbind]*[http://docs.jquery.com/Events/unbind ($type , $data )] This does the opposite of bind, it removes bound events from each of the matched elements.
+
 ==Interaction Helpers==
 _none_
+
 ==Event Helpers==
  * *[http://docs.jquery.com/Events/change change]*[http://docs.jquery.com/Events/change ()] Triggers the change event of each matched element.
  * *[http://docs.jquery.com/Events/change change]*[http://docs.jquery.com/Events/change ($fn)] Binds a function to the change event of each matched element.
