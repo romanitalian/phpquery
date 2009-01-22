@@ -2,8 +2,6 @@
 {{{
 # with zend framework
 svn checkout http://phpquery.googlecode.com/svn/trunk/ phpQuery
-# without zend framework
-svn checkout http://phpquery.googlecode.com/svn/trunk/ phpQuery --ignore-externals
 }}}
 ====Checkout developer branch====
 {{{
