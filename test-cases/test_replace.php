@@ -30,3 +30,4 @@ else
 	print "Test '{$testName}' <strong>FAILED</strong> !!! ";
 $result->dump();
 print "\n";
+?>

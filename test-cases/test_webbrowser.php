@@ -1,74 +1,54 @@
 <?php
+//error_reporting(E_ALL);
 require_once('../phpQuery/phpQuery.php');
 phpQuery::$debug = true;
+//die(file_get_contents('http://google.com/search?hl=pl&q=phpQuery&btnG=Szukaj+w+Google&lr='));
 phpQuery::extend('WebBrowser');
-
 phpQuery::$ajaxAllowedHosts[] = 'gmail.com';
 phpQuery::$ajaxAllowedHosts[] = 'google.com';
 phpQuery::$ajaxAllowedHosts[] = 'www.google.com';
 phpQuery::$ajaxAllowedHosts[] = 'www.google.pl';
 phpQuery::$ajaxAllowedHosts[] = 'mail.google.com';
-
-// Google search results
-if (0) {
-	phpQuery::$plugins->browserGet('http://google.com/', 'success1');
-	/**
-	*
-	* @param $pq phpQueryObject
-	* @return unknown_type
-	*/
-	function success1($pq) {
-		print 'success1 callback';
-		$pq
-			->WebBrowser('success2')
-				->find('input[name=q]')
-				->val('phpQuery')
-				->parents('form')
-					->submit()
-		;
-	}
-	/**
-	*
-	* @param $html phpQueryObject
-	* @return unknown_type
-	*/
-	function success2($pq) {
-		print 'success2 callback';
-		print $pq
-			->find('script')->remove()->end();
-	}
+//phpQuery::$ajaxAllowedHosts[] = '';
+//phpQuery::$plugins->WebBrowserBind('WebBrowser');
+phpQuery::$plugins->browserGet('http://google.com/', 'success1');
+/**
+ *
+ * @param $pq phpQueryObject
+ * @return unknown_type
+ */
+function success1($pq) {
+	print 'success1 callback';
+//	print 'SETCOOKIE'.$pq->document->xhr->getLastResponse()->getHeader('Set-Cookie');
+	$pq
+		->WebBrowser('success2')
+		/* google results */
+			->find('input[name=q]')
+			->val('phpQuery')
+			->parents('form')
+				->submit()
+		/* gmail login */
+		// it doesnt work and i dont know why... :(
+//		->find('#Email')
+//			->val('XXX@gmail.com')->end()
+//		->find('#Passwd')
+//			->val('XXX')
+//			->parents('form')
+//				->submit()
+	;
+//		->find('a:contains(Polski)')
+//			->click();
 }
-
-// Gmail login (not working...)
-if (0) {
-	phpQuery::plugin("Scripts");
-	phpQuery::newDocument('<div/>')
-		->script('google_login')
-		->location('http://mail.google.com/')
-		->toReference($pq);
-	if ($pq) {
-		print $pq->script('print_websafe');
-	}
-}
-
-// Gmail login v2 (not working...)
-if (0) {
-	$browser = null;
-	$browserCallback = new CallbackReference($browser);
-	phpQuery::browserGet('http://mail.google.com/', $browserCallback);
-	if ($browser) {
-		$browser
-			->WebBrowser($browserCallback)
-			->find('#Email')
-				->val('XXX@gmail.com')->end()
-			->find('#Passwd')
-				->val('XXX')
-				->parents('form')
-					->submit();
-		if ($browser) {
-			print $browser->script('print_websafe');
-		}
-	}
+/**
+ *
+ * @param $html phpQueryObject
+ * @return unknown_type
+ */
+function success2($pq) {
+//	die(var_dump($pq->document->xhr->getCookieJar()->getMatchingCookies('http://mail.google.com/mail/?ui=html&zy=l')));
+	print 'success2 callback';
+	print $pq
+		->find('script')->remove()->end();
 }
 
 //	if ( $result->whois() == $testResult )
