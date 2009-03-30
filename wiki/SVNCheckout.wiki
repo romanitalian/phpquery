@@ -1,17 +1,14 @@
 ====Checkout latest release====
 {{{
-# with zend framework
 svn checkout http://phpquery.googlecode.com/svn/trunk/ phpQuery
 }}}
 ====Checkout developer branch====
 {{{
-# with zend framework
 svn checkout http://phpquery.googlecode.com/svn/branches/dev/ phpQuery-dev
-# without zend framework
-svn checkout http://phpquery.googlecode.com/svn/branches/dev/ phpQuery-dev --ignore-externals
 }}}
-You may want to checkout phpQuery without Zend Framework, as only small part of framework is used. After checkout, get needed files from [http://code.google.com/p/phpquery/downloads/list release packages].
 
-SVN changelog is available thou [http://code.google.com/p/phpquery/source/list Web interface] and [http://code.google.com/feeds/p/phpquery/svnchanges/basic RSS].
+You can directly [http://code.google.com/p/phpquery/source/browse/ browse the code] using web interface.
 
-Get SVN for windows from [http://tortoisesvn.tigris.org/ TortoiseSVN].
+SVN changelog is also available thou [http://code.google.com/p/phpquery/source/list web interface] and also as [http://code.google.com/feeds/p/phpquery/svnchanges/basic RSS].
+
+Get SVN for Windows from [http://tortoisesvn.tigris.org/ TortoiseSVN].
