@@ -1,0 +1,58 @@
+#!/usr/bin/env php
+<?php
+$release = $argv[1];
+if (! $release)
+	die("Release version needed\n");
+if (file_exists(phpQuery-$release-PEAR))
+	exec("rm -r phpQuery-$release-PEAR");
+exec("cp -r phpQuery/phpQuery phpQuery-$release-PEAR");
+$sourceDir = dirname(__FILE__)."/sources/$release/phpQuery-$release-PEAR/";
+$files = listFiles($sourceDir);
+require 'phpQuery.php';
+//phpQuery::$debug = 2;
+$xml = phpQuery::newDocumentFile(dirname(__FILE__).'/package.xml');
+file_put_contents('files.xml', $files);
+$xml['dir']->append($files);
+$xml['version > *'] = $release;
+file_put_contents($sourceDir.'package.xml', $xml->markupOuter());
+print exec("cd $sourceDir; pear package");
+print "\n";
+exec("mv {$sourceDir}phpQuery-$release.tgz ../../dist/$release/phpQuery-$release-pear.tgz");
+
+function listFiles($packageDir) {
+	$baseIdent = 3;
+	$xml = '';
+	$iterator = new RecursiveIteratorIterator(
+		new RecursiveDirectoryIterator($packageDir),
+		RecursiveIteratorIterator::SELF_FIRST
+	);
+	$lastDepth = null;
+	foreach ($iterator as $path) {
+	// 	var_dump(ReflectionObject::export($path));
+		$depth = count(explode('/', 
+			str_replace(rtrim($packageDir, '/'), '', $path->getPath())
+		));
+		// workaround trailing slash
+		$depth--;
+		if (! isset($lastDepth))
+			$lastDepth = $depth;
+		for ($i = $lastDepth; $i > $depth; $i--) {
+			$xml .= str_repeat("\t", $i+$baseIdent-1);
+			$xml .= "</dir>\n";
+		}
+		$lastDepth = $depth;
+		$xml .= str_repeat("\t", $depth+$baseIdent);
+		if ($path->isDir()) {
+			$xml .= "<dir name='{$path->getBasename()}'>";
+		} else {
+			$xml .= "<file name='{$path->getBasename()}' role='php'></file>";
+		}
+		$xml .= "\n";
+	}
+	// why 0 ?
+	for ($i = $lastDepth; $i > 0; $i--) {
+		$xml .= str_repeat("\t", $i+$baseIdent-1);
+		$xml .= "</dir>\n";
+	}
+	return $xml;
+}

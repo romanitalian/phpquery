@@ -1,0 +1,17 @@
+Source: phpquery
+Section: Networking/WWW
+Priority: extra
+Maintainer: Tobiasz Cudnik <tobisz.cudnik@gmail.com>
+Build-Depends: debhelper (>= 7)
+Standards-Version: 3.8.1
+Homepage: http://code.google.com/p/phpquery/
+
+Package: phpquery
+Architecture: all
+Depends: ${misc:Depends}
+Description: Webpage scraper using DOM and jQuery-like API.
+ The phpQuery allows the user to request remote document and then manipulate it
+ using Document Object Model wrapped by jQuery-like API. After manipulations,
+ selected elements are printed to STDOUT.
+ Install phpQuery if you'd like to perform web-scrapping directly from command
+ line.

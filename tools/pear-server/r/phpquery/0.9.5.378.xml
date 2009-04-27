@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<r xmlns="http://pear.php.net/dtd/rest.release2"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xsi:schemaLocation="http://pear.php.net/dtd/rest.release2
+                       http://pear.php.net/dtd/rest.release2.xsd"
+>
+ <p xlink:href="/p/phpquery">phpQuery</p>
+ <c>phpquery-pear.appspot.com</c>
+ <v>0.9.5.378</v>
+ <a>0.9.5.378</a>
+ <mp>5.0.0</mp>
+ <st>stable</st>
+ <l>MIT License</l>
+ <m>tobiasz.cudnik</m>
+ <s>phpQuery - jQuery port to PHP</s>
+ <d>
+  phpQuery is a server-side, chainable, CSS3 selector driven Document Object Model (DOM) API based on jQuery JavaScript Library.
+ </d>
+ <da>2008-03-12 08:30:00</da>
+ <!--<n></n>-->
+ <f>100761</f>
+ <n>...</n>
+ <g>http://phpquery.googlecode.com/files/phpQuery-0.9.5.378-pear</g>
+ <x xlink:href="package-0.9.5.371.xml"/>
+</r>

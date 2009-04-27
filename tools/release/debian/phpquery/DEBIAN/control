@@ -1,0 +1,14 @@
+Package: phpquery
+Version: 0.9.5.368
+Architecture: all
+Maintainer: Tobiasz Cudnik <tobisz.cudnik@gmail.com>
+Installed-Size: 824
+Section: Networking/WWW
+Priority: extra
+Homepage: http://code.google.com/p/phpquery/
+Description: Webpage scraper using DOM and jQuery-like API.
+ The phpQuery allows the user to request remote document and then manipulate it
+ using Document Object Model wrapped by jQuery-like API. After manipulations,
+ selected elements are printed to STDOUT.
+ Install phpQuery if you'd like to perform web-scrapping directly from command
+ line.

@@ -1,0 +1,138 @@
+phpQuery - pq();
+phpQuery is a server-side, chainable, CSS3 selector driven Document Object Model (DOM) API based on jQuery JavaScript Library. 
+Library is written in PHP5 and provides Command Line Interface (CLI). 
+Manual
+ * Basics 
+ * Ported jQuery sections 
+   * Selectors 
+   * Attributes 
+   * Traversing 
+   * Manipulation 
+   * Ajax 
+   * Events 
+   * Utilities 
+   * Plugin ports 
+ * PHP Support 
+ * Command Line Interface 
+ * Multi document support 
+ * Plugins 
+   * WebBrowser 
+   * Scripts 
+ * jQueryServer 
+ * Debugging 
+ * Bootstrap file 
+
+Download
+ * Release packages (rss) 
+   * ZIP format 
+   * RPM format 
+ * Release notes 
+ * Bugs: active / fixed 
+ * Dependencies 
+ * SVN checkout 
+
+Documentation
+ * Wiki 
+ * Manual 
+ * API reference 
+ * jQuery documentation wiki 
+   * CHM version 
+   * CheatSheet 
+
+Publications
+ * Official blog with latest release notes 
+ * Author's blog with examples and new feature sneak peaks 
+ * Roadmap: Planned / Done 
+
+Feedback
+ * Issue/Bug Tracker (new issue) 
+ * Google Group 
+ * IRC #phpquery at freenode.net 
+ * ohloh.net has phpQuery project 
+
+
+
+.gadget-title {
+  margin-bottom: 2px;
+}
+
+function resizeIframeHandler(opt_height) {
+  var elem = document.getElementById(this.f);
+  if (!elem) return;
+  if (!opt_height) {
+    elem.style.height = undefined;
+  }
+  else {
+    opt_height = Math.max(100, opt_height);
+    elem.style.height = opt_height + 'px';
+  }
+}
+gadgets.rpc.register("resize_iframe", resizeIframeHandler);
+
+gadgets.rpc.register('set_title', function(title) {
+ var elem = document.getElementById(this.f + '_title');
+ if (elem) {
+   elem.innerHTML = gadgets.util.escape(title);
+ }
+});
+
+Examples
+CLI
+Fetch number of downloads of all release packages 
+phpquery 'http://code.google.com/p/phpquery/downloads/list?can=1' \
+  --find '.vt.col_4 a' --contents \
+  --getString null array_sum
+PHP
+Examples from demo.php 
+require('phpQuery/phpQuery.php');
+INITIALIZE IT
+// $doc = phpQuery::newDocumentHTML($markup);
+// $doc = phpQuery::newDocumentXML();
+// $doc = phpQuery::newDocumentFileXHTML('test.html');
+// $doc = phpQuery::newDocumentFilePHP('test.php');
+// $doc = phpQuery::newDocument('test.xml', 'application/rss+xml');
+// this one defaults to text/html in utf8
+$doc = phpQuery::newDocument('<div/>');
+FILL IT
+// array syntax works like ->find() here
+$doc['div']->append('<ul></ul>');
+// array set changes inner html
+$doc['div ul'] = '<li>1</li><li>2</li><li>3</li>';
+MANIPULATE IT
+// almost everything can be a chain
+$li = null;
+$doc['ul > li']
+	->addClass('my-new-class')
+	->filter(':last')
+		->addClass('last-li')
+// save it anywhere in the chain
+		->toReference($li);
+SELECT DOCUMENT
+// pq(); is using selected document as default
+phpQuery::selectDocument($doc);
+// documents are selected when created or by above method
+// query all unordered lists in last selected document
+pq('ul')->insertAfter('div');
+ITERATE IT
+// all LIs from last selected DOM
+foreach(pq('li') as $li) {
+	// iteration returns PLAIN dom nodes, NOT phpQuery objects
+	$tagName = $li->tagName;
+	$childNodes = $li->childNodes;
+	// so you NEED to wrap it within phpQuery, using pq();
+	pq($li)->addClass('my-second-new-class');
+}
+PRINT OUTPUT
+// 1st way
+print phpQuery::getDocument($doc->getDocumentID());
+// 2nd way
+print phpQuery::getDocument(pq('div')->getDocumentID());
+// 3rd way
+print pq('div')->getDocument();
+// 4th way
+print $doc->htmlOuter();
+// 5th way
+print $doc;
+// another...
+print $doc['ul'];
+

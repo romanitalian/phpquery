@@ -1,0 +1,5 @@
+phpquery (55.9.5.368) unstable; urgency=low
+
+  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+
+ -- Tobiasz Cudnik <tobisz.cudnik@gmail.com>  Sat, 04 Apr 2009 13:02:37 +0200

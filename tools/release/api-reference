@@ -1,0 +1,6 @@
+# TODO autocommit with revision no in log
+cd /home/bob/workspace/phpQuery/phpQuery
+phpdoc -t /home/bob/workspace/phpQuery/api-reference \
+  -o HTML:Smarty:PHP \
+  -f 'Callback.php,phpQuery.php,phpQueryObject.php,DOMDocumentWrapper.php,phpQueryEvents.php,DOMEvent.php'\
+	-dn phpQuery

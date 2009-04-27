@@ -1,0 +1,2 @@
+alien -r deb/phpquery_$1_all.deb
+cp phpquery-$1-2.noarch.rpm ../../dist/$1/phpquery-$1.noarch.rpm

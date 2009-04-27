@@ -1,0 +1,7 @@
+mkdir -p deb/phpquery-$1
+cp -r ../../debian deb/phpquery-$1
+cd deb/phpquery-$1
+sed -ir 's/^phpquery ([0-9.-]\+)/phpquery ('$1')/' debian/changelog
+dpkg-buildpackage -rfakeroot
+cd ../..
+cp deb/phpquery_$1_all.deb ../../dist/$1/phpquery-$1.deb

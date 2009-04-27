@@ -1,0 +1,16 @@
+echo "Updating trunk..."
+svn up trunk
+echo "Merging trunk..."
+svn merge http://phpquery.googlecode.com/svn/trunk http://phpquery.googlecode.com/svn/branches/dev/ trunk
+svn propdel svn:externals -N trunk/phpQuery
+echo "Commiting trunk..."
+svn ci trunk -m "Released 0.9.5 "$1
+
+# 0.9.5
+cd tags
+echo "Updating tags/0.9.5..."
+svn up 0.9.5 --ignore-externals
+echo "Merging tags/0.9.5..."
+svn merge http://phpquery.googlecode.com/svn/tags/0.9.5 http://phpquery.googlecode.com/svn/branches/dev/ 0.9.5
+echo "Commiting tags/0.9.5"
+svn ci 0.9.5  --non-interactive -m "Tagged 0.9.5"
