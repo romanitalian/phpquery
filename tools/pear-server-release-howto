@@ -1,0 +1,14 @@
+http://www.developertutorials.com/pear-manual/core.rest.directorystructure.html
+
+Files to update during release (REPLACE PREVIOUS VERSION!):
+- c/HTML/packagesinfo.xml
+- r/phpquery/allreleases.xml
+- r/phpquery/allreleases2.xml
+- r/phpquery/latest.txt
+- r/phpquery/stable.txt
+- r/phpquery/beta.txt (optional)
+
+New files during release:
+- VERSION.REVISION.xml
+- package-VERSION.REVISION.xml
+- deps-VERSION.REVISION.xml

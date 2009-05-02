@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package packagerversion="1.7.2" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0 http://pear.php.net/dtd/tasks-1.0.xsd http://pear.php.net/dtd/package-2.0 http://pear.php.net/dtd/package-2.0.xsd">
+ <name>phpQuery</name>
+ <channel>phpquery-pear.appspot.com</channel>
+ <summary>phpQuery - jQuery port to PHP</summary>
+ <description>phpQuery is a server-side, chainable, CSS3 selector driven Document Object Model (DOM) API based on jQuery JavaScript Library.</description>
+ <lead>
+  <name>Tobiasz Cudnik</name>
+  <user>tobiasz.cudnik</user>
+  <email>tobiasz.cudnik@gmail.com</email>
+  <active>yes</active>
+ </lead>
+ <date>2009-05-01</date>
+ <time>23:05:19</time>
+ <version>
+  <release>0.9.5.386</release>
+  <api>0.9.5.386</api>
+ </version>
+ <stability>
+  <release>stable</release>
+  <api>stable</api>
+ </stability>
+ <license uri="http://www.opensource.org/licenses/mit-license.html">The MIT License
+
+Copyright (c) 2009 Tobiasz Cudnik
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.</license>
+ <notes>...</notes>
+ <contents>
+  <dir name="/">
+   <file md5sum="ce04abf94b552c20e713c73e7ed18c23" name="phpQuery/Zend/Http/Client/Adapter/Test.php" role="php" />
+   <file md5sum="9ad468f16cb73f317f861625d5d0614d" name="phpQuery/Zend/Http/Client/Adapter/Exception.php" role="php" />
+   <file md5sum="079123b4d6af64e0df87578a5defb987" name="phpQuery/Zend/Http/Client/Adapter/Socket.php" role="php" />
+   <file md5sum="de496cfc3393709e77992941feac381f" name="phpQuery/Zend/Http/Client/Adapter/Interface.php" role="php" />
+   <file md5sum="4d8e65dbef069716a7086709c222da10" name="phpQuery/Zend/Http/Client/Adapter/Proxy.php" role="php" />
+   <file md5sum="35be2a8e292cbaa8b7c97d97ca9ce3cb" name="phpQuery/Zend/Http/Client/Exception.php" role="php" />
+   <file md5sum="d4cbf56ce86a2c46a33227719cfebd68" name="phpQuery/Zend/Http/Cookie.php" role="php" />
+   <file md5sum="3ca8a8c18146ef3e4f28ef3f8ea98db6" name="phpQuery/Zend/Http/Exception.php" role="php" />
+   <file md5sum="29db64d10d0164b162951b0dbcd5fb31" name="phpQuery/Zend/Http/Client.php" role="php" />
+   <file md5sum="20c44ab15e9be6a321c6bd211c915b3a" name="phpQuery/Zend/Http/Response.php" role="php" />
+   <file md5sum="2a9c47bcb1ffa67527dff8587ccdbe6e" name="phpQuery/Zend/Http/CookieJar.php" role="php" />
+   <file md5sum="a806ab37bf4d6bf74b31a49edfab2426" name="phpQuery/Zend/Uri/Exception.php" role="php" />
+   <file md5sum="13754e3908af6bc67931bbed6a800885" name="phpQuery/Zend/Uri/Http.php" role="php" />
+   <file md5sum="f22d5985ea3098b075e46157df486801" name="phpQuery/Zend/Json/Exception.php" role="php" />
+   <file md5sum="b7b7e1bbd19b76908c2596e979fba21c" name="phpQuery/Zend/Json/Decoder.php" role="php" />
+   <file md5sum="de32d0b7d55589afc121d8bb131bc2cf" name="phpQuery/Zend/Json/Encoder.php" role="php" />
+   <file md5sum="d830670282dccc98dfc790c8981cdf3e" name="phpQuery/Zend/Validate/Hostname/No.php" role="php" />
+   <file md5sum="0057c78c680f55b61bde5bf6246aad14" name="phpQuery/Zend/Validate/Hostname/Se.php" role="php" />
+   <file md5sum="c08c65835b232b098df10937222151d5" name="phpQuery/Zend/Validate/Hostname/Li.php" role="php" />
+   <file md5sum="43f9998216852462b486adbaf6599629" name="phpQuery/Zend/Validate/Hostname/Interface.php" role="php" />
+   <file md5sum="3125406a1214eba83814121747084211" name="phpQuery/Zend/Validate/Hostname/At.php" role="php" />
+   <file md5sum="208bf5077a6d01349caf89f32049940d" name="phpQuery/Zend/Validate/Hostname/Ch.php" role="php" />
+   <file md5sum="8738c6a95408e73d2ce4c415ad14a232" name="phpQuery/Zend/Validate/Hostname/Fi.php" role="php" />
+   <file md5sum="75e199bb3ee19ca54fd086016f0d3485" name="phpQuery/Zend/Validate/Hostname/Hu.php" role="php" />
+   <file md5sum="c8a2698a0d5fbcf1737879f125de571e" name="phpQuery/Zend/Validate/Hostname/De.php" role="php" />
+   <file md5sum="ce5188d8ba25430633ca1a61d2919b73" name="phpQuery/Zend/Validate/File/FilesSize.php" role="php" />
+   <file md5sum="10dac292b1fe78e1a8bbc3a3af2ab3c6" name="phpQuery/Zend/Validate/File/ImageSize.php" role="php" />
+   <file md5sum="b41e4a3abed1aefed5d75b3d774d0703" name="phpQuery/Zend/Validate/File/Upload.php" role="php" />
+   <file md5sum="10218148a3ec346a57928f7e4403cd0a" name="phpQuery/Zend/Validate/File/NotExists.php" role="php" />
+   <file md5sum="87b53a5858f43bfaac5d34d31204eb47" name="phpQuery/Zend/Validate/File/Extension.php" role="php" />
+   <file md5sum="f11eba041ba8c1eebde4105fe6a04778" name="phpQuery/Zend/Validate/File/Count.php" role="php" />
+   <file md5sum="af4b81334805b6840bef8f32fbfe20c3" name="phpQuery/Zend/Validate/File/Exists.php" role="php" />
+   <file md5sum="b990ba760b7d7e18cbc51daaada62602" name="phpQuery/Zend/Validate/File/MimeType.php" role="php" />
+   <file md5sum="aa50b3cb733fcceff95ff192e894b202" name="phpQuery/Zend/Validate/File/Size.php" role="php" />
+   <file md5sum="f772b7b3ab5f34525bfb064e0c7e25e5" name="phpQuery/Zend/Validate/Barcode/UpcA.php" role="php" />
+   <file md5sum="40f61a22b89877b6b37e3b6d475b5be0" name="phpQuery/Zend/Validate/Barcode/Ean13.php" role="php" />
+   <file md5sum="be63e1f720ee9710597873552bff47bd" name="phpQuery/Zend/Validate/InArray.php" role="php" />
+   <file md5sum="c956ce487144839eff13b07f55b26cb7" name="phpQuery/Zend/Validate/Ccnum.php" role="php" />
+   <file md5sum="14a1f7bb752d370268a37ba5283515c1" name="phpQuery/Zend/Validate/LessThan.php" role="php" />
+   <file md5sum="d0d4435ef3d6e4ab4e43fccd249b9d16" name="phpQuery/Zend/Validate/Between.php" role="php" />
+   <file md5sum="4e28ec0b7af73b6f66394bc933525662" name="phpQuery/Zend/Validate/Regex.php" role="php" />
+   <file md5sum="8cca83a74788fccc9a648ab4dbaf45f7" name="phpQuery/Zend/Validate/Date.php" role="php" />
+   <file md5sum="4593b5d17155b56f857c5e6f7265c364" name="phpQuery/Zend/Validate/Barcode.php" role="php" />
+   <file md5sum="3272ecd1b0b9bec224c124b08034cec3" name="phpQuery/Zend/Validate/Exception.php" role="php" />
+   <file md5sum="b8f969a70edfe55b13a6abf86c2d6178" name="phpQuery/Zend/Validate/GreaterThan.php" role="php" />
+   <file md5sum="4b6a79c8a5e4cb865ee7e12afb226bdd" name="phpQuery/Zend/Validate/Alnum.php" role="php" />
+   <file md5sum="3ad0eadb0114cdd4705ace64984acf02" name="phpQuery/Zend/Validate/Interface.php" role="php" />
+   <file md5sum="a46ea2dacccf400011bc7b695d4543fd" name="phpQuery/Zend/Validate/Int.php" role="php" />
+   <file md5sum="255a424fa08108d4dd313bfccb3c1bfa" name="phpQuery/Zend/Validate/Identical.php" role="php" />
+   <file md5sum="f51fcafdc2ab1acc6df007ba1d77e5ae" name="phpQuery/Zend/Validate/Alpha.php" role="php" />
+   <file md5sum="55ecdcee8ef45102e32e9129c2148ab7" name="phpQuery/Zend/Validate/NotEmpty.php" role="php" />
+   <file md5sum="d841743a513a75f2fedfa0ef3489d36d" name="phpQuery/Zend/Validate/Digits.php" role="php" />
+   <file md5sum="46e3ae9a83b9e914527b753a5ff7e497" name="phpQuery/Zend/Validate/Abstract.php" role="php" />
+   <file md5sum="0fa83ce1b5c6f413baa695ba9ebde570" name="phpQuery/Zend/Validate/Float.php" role="php" />
+   <file md5sum="538285c91242129aabc12ac4b513516e" name="phpQuery/Zend/Validate/Hostname.php" role="php" />
+   <file md5sum="7b0a0f43289629590371804fbea0c17b" name="phpQuery/Zend/Validate/Ip.php" role="php" />
+   <file md5sum="6628c7b1eb96768e02c7b768ea400a11" name="phpQuery/Zend/Validate/StringLength.php" role="php" />
+   <file md5sum="e9f0b3dcbcece3277cd8e05ed2ad4fde" name="phpQuery/Zend/Validate/EmailAddress.php" role="php" />
+   <file md5sum="7271613da1bc891757e06e9e187d8c07" name="phpQuery/Zend/Validate/Hex.php" role="php" />
+   <file md5sum="338e7e56f9af84d2134bd8c316219060" name="phpQuery/Zend/Registry.php" role="php" />
+   <file md5sum="7444d4451b0836b2412d695f1c0b4941" name="phpQuery/Zend/Exception.php" role="php" />
+   <file md5sum="cac05fbecb21147377c2e0cd1fa866a1" name="phpQuery/Zend/Uri.php" role="php" />
+   <file md5sum="ae1f071c97729de0fd452bacfacc7d7f" name="phpQuery/Zend/Loader.php" role="php" />
+   <file md5sum="b9b6e8ffe34702c6c7fe55dea942b150" name="phpQuery/plugins/Scripts/google_login.php" role="php" />
+   <file md5sum="108d53649df8ce34dd317705a942df5b" name="phpQuery/plugins/Scripts/__config.example.php" role="php" />
+   <file md5sum="f500f287801e06bc8f44764d150052f0" name="phpQuery/plugins/Scripts/print_websafe.php" role="php" />
+   <file md5sum="f9f5fb692fa5c341ba79a87a4e288c7c" name="phpQuery/plugins/Scripts/print_source.php" role="php" />
+   <file md5sum="f4f3353ac12108b103d4d378b3da75d6" name="phpQuery/plugins/Scripts/example.php" role="php" />
+   <file md5sum="b7829b5e87c5d292fc9064fd26bbedc3" name="phpQuery/plugins/Scripts/fix_webroot.php" role="php" />
+   <file md5sum="7e723edc41eb09f155f309f1b9a96b5a" name="phpQuery/plugins/Scripts.php" role="php" />
+   <file md5sum="0d935dda0cbf4190af0240852d9886e1" name="phpQuery/plugins/example.php" role="php" />
+   <file md5sum="a1460314cc669aef13ca1b3a4653a2b4" name="phpQuery/plugins/WebBrowser.php" role="php" />
+   <file md5sum="830b4b2f02dcfd73f00b62bb9cc0c1db" name="phpQuery/compat/mbstring.php" role="php" />
+   <file md5sum="c0adee964715a32c2807c737ad4ca969" name="phpQuery/phpQueryObject.php" role="php" />
+   <file md5sum="63c8d4807f8d370fad634d6b6c781eda" name="phpQuery/DOMEvent.php" role="php" />
+   <file md5sum="02e9ee0d5564652dbcd2487a7d7e08ef" name="phpQuery/phpQueryEvents.php" role="php" />
+   <file md5sum="b3e45593ba05b037049dc3567ef503ce" name="phpQuery/DOMDocumentWrapper.php" role="php" />
+   <file md5sum="3c7225c7d41b0397633628cfb0ff545a" name="phpQuery/Callback.php" role="php" />
+   <file md5sum="df086b7af0a5990415de15abd7a01ee7" name="phpQuery/bootstrap.example.php" role="php" />
+   <file md5sum="4f9863b86f259ea95486003b0ef9d91c" name="phpQuery.php" role="php" />
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5.0</min>
+   </php>
+   <pearinstaller>
+    <min>1.4.0</min>
+   </pearinstaller>
+  </required>
+ </dependencies>
+ <phprelease />
+ <changelog />
+</package>

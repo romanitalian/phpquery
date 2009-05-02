@@ -1,12 +1,16 @@
 #!/usr/bin/env sh
 # trunk
 echo "Releasing "$1" to trunk\n"
+svn rm https://phpquery.googlecode.com/svn/trunk \
+      -m "Releasing "$1" to trunk"
 svn copy https://phpquery.googlecode.com/svn/branches/dev \
            https://phpquery.googlecode.com/svn/trunk \
       -m "Releasing "$1" to trunk"
 echo "done\n"
 # tag
 echo "Tagging "$1" from trunk"
+svn rm https://phpquery.googlecode.com/svn/tags/$1 \
+      -m "Releasing "$1" to trunk"
 svn copy https://phpquery.googlecode.com/svn/trunk \
            https://phpquery.googlecode.com/svn/tags/$1 \
       -m "Tagging "$1" from trunk"

@@ -57,7 +57,6 @@ $workingDir/package-rpm $release
 #mkdir phpQuery-onefile-$release
 #mv phpquery phpQuery-onefile-$release
 #tar -czvf $workingDir/sources/$release/phpQuery-onefile-$release.tar.gz phpQuery-onefile-$release
-cd $workingDir
 
 # rpm standard
 #sed -ir 's/Version: .*$/Version: '$release'/' phpquery.spec
@@ -73,3 +72,6 @@ cd $workingDir
 #sudo cp sources/$release/phpQuery-onefile-$release.tar.gz /usr/src/packages/SOURCES
 #sudo rpmbuild -ba phpquery-onefile.spec
 #cp /usr/src/packages/RPMS/noarch/phpQuery-onefile-$release-1.noarch.rpm dist/$release/
+
+# finish
+cd $workingDir
