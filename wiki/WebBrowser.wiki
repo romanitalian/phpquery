@@ -23,7 +23,7 @@ Adding web browser functionality to existing phpQuery object and submiting the f
 Querying Google against "search phrase":
 {{{
 require_once('phpQuery/phpQuery.php');
-phpQuery::browserGet('http://google.com/', 'success1');
+phpQuery::browserGet('http://www.google.com/', 'success1');
 function success1($browser) {
   $browser
     ->WebBrowser('success2')
